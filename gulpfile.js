@@ -150,6 +150,7 @@ gulp.task('build', 'Remove unneeded files and folders from the build folder', ['
         'config.rb',
         'gulpfile.js',
         'gulpconfig.js',
+        'gulpconfig.json',
         'package.json',
         'pxg.json',
         'build',
