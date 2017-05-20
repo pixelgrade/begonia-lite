@@ -1,0 +1,66 @@
+.toolbar-navigation {
+  position: absolute;
+
+  width: 100vh;
+  height: 80px;
+
+  top: 0.75em;
+  left: 0;
+  bottom: 0;
+
+  display: block;
+
+  background: #f6f6f6;
+  z-index: 1;
+
+  -webkit-transform-origin: left top;
+  -webkit-transform: rotate(-90deg) translateX(-99%);
+  transform-origin: left top;
+  transform: rotate(-90deg) translateX(-99%);
+
+  @include below(lap){
+    display: none;
+  }
+
+  .nav--main {
+    display: block;
+
+    margin: 0 auto;
+    padding-right: 80px;
+
+    .menu-item {
+      list-style: none;
+
+      margin-right: 15px;
+      float: right;
+      height: 100%;
+      line-height: 75px;
+      margin-left: 0;
+
+      a {
+        @extend %link-style;
+        font-size: 24px;
+        line-height: 36px;
+        white-space: nowrap;
+        text-transform: none;
+
+      }
+
+      &:after {
+        content: "";
+        border-bottom: 3px solid $color-accent;
+        display: inline-block;
+        width: 50px;
+        vertical-align: middle;
+        margin-left: 15px;
+        margin-top:-10px;
+      }
+    }
+      :nth-child(1) {
+        &:after {
+          display: none;
+        }
+
+    }
+  }
+}

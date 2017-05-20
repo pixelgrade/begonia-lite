@@ -1,0 +1,76 @@
+%heading {
+    display: block;
+    font-weight: bold;
+    color: $color-dark;
+    @include baseline();
+}
+
+%margin-bottom{
+ margin-bottom: 48px;
+}
+
+.h0 {
+    @extend %heading;
+    @extend %fs200 !optional;
+    margin-bottom: 80px;
+
+    @include below(small){
+        font-size: 83px;
+    }
+}
+
+%h1 {
+    @extend %heading;
+    @extend %fs50 !optional;
+    @extend %margin-bottom;
+}
+
+%h2 {
+    @extend %heading;
+    @extend %fs32 !optional;
+    @extend %margin-bottom;
+}
+
+%h3 {
+    @extend %heading;
+    @extend %fs24 !optional;
+    @extend %margin-bottom;
+}
+
+%h4 {
+    @extend %heading;
+    @extend %fs18 !optional;
+    @extend %margin-bottom;
+}
+
+%h5 {
+    @extend %heading;
+    @extend %fs14 !optional;
+    margin-bottom: 32px;
+}
+
+%h6 {
+    @extend %heading;
+    @extend %fs12 !optional;
+    margin-bottom: 16px;
+}
+
+.lead {
+    font-size: 20px;
+    @extend %margin-bottom;
+}
+
+.dropcap {
+    float: left;
+    font-size: 85px;
+    font-weight: bold;
+    line-height: 40px;
+    margin-top: 0.25em;
+    margin-right: 0.10em;
+}
+
+p, a, ul, li {
+    font-size: 17px;
+    color: #383C50;
+    text-decoration: none;
+}

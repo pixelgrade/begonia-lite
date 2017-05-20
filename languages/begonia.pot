@@ -1,0 +1,184 @@
+# Copyright (C) 2017 PixelGrade
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Begonia 0.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/begonia\n"
+"POT-Creation-Date: 2017-03-24 14:15:25+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:21
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr ""
+
+#. translators: %1$s: smiley
+
+#: 404.php:29
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: comments.php:31
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:40 comments.php:61
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:43 comments.php:64
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:44 comments.php:65
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:78
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:18
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: footer.php:18
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: footer.php:18 footer.php:20
+msgid "Begonia"
+msgstr ""
+
+#: footer.php:20
+msgid "Theme: %1$s by %2$s %3$s %4$s."
+msgstr ""
+
+#: footer.php:20
+msgid "<a href=\""
+msgstr ""
+
+#: footer.php:20
+msgid "\" rel=\"designer\">Pixelgrade</a>"
+msgstr ""
+
+#: functions.php:48
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:49
+msgid "Social Menu"
+msgstr ""
+
+#: functions.php:87
+msgid "Footer Sidebar"
+msgstr ""
+
+#: functions.php:89
+msgid "Add widgets here."
+msgstr ""
+
+#: header.php:25
+msgid "Skip to content"
+msgstr ""
+
+#: inc/template-tags.php:23
+msgid "View all posts in %s"
+msgstr ""
+
+#: inc/template-tags.php:43
+msgctxt "post date"
+msgid "%s"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+
+#: inc/template-tags.php:58
+msgid " "
+msgstr ""
+
+#: inc/template-tags.php:60
+msgid "Tags: %1$s"
+msgstr ""
+
+#. translators: %s: post title
+
+#: inc/template-tags.php:67
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#. translators: %s: Name of current post
+
+#: inc/template-tags.php:74 template-parts/content-page.php:34
+msgid "Edit %s"
+msgstr ""
+
+#: search.php:19
+msgid "Search Results for: %s"
+msgstr ""
+
+#: template-parts/content-hero.php:47 template-parts/content-no_top.php:39
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: template-parts/content-hero.php:51 template-parts/content-no_top.php:43
+msgid "Read More"
+msgstr ""
+
+#: template-parts/content-hero.php:56 template-parts/content-no_top.php:48
+#: template-parts/content-page.php:22 template-parts/content.php:43
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:21
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:25
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:31
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#. translators: %s: Name of current post.
+
+#: template-parts/content.php:38
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: template-parts/toolbar.php:7
+msgid "Main navigation"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://demos.pixelgrade.com/boilerplate/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Some lovely description of your theme here."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "PixelGrade"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://pixelgrade.com"
+msgstr ""

@@ -1,0 +1,30 @@
+// shorthand media queries for defined breakpoints
+@mixin above($bpname) {
+    @media only screen and ( min-width: map-get($breakpoints, $bpname) ) {
+        @content;
+    }
+}
+
+@mixin below($bpname) {
+    @media screen and ( max-width: map-get($breakpoints, $bpname) ) {
+        @content;
+    }
+}
+
+@mixin font-face($name, $filename, $weight: null) {
+    @font-face {
+        font-family: $name;
+        @if $weight != null {
+            font-wight: $weight;
+        }
+        src: url(unquote($filename) + '.woff2') format('woff2'), /* Super Modern Browsers */
+            url(unquote($filename) + '.woff') format('woff'); /* Pretty Modern Browsers */
+    }
+}
+
+@mixin placeholder() {
+    ::-webkit-input-placeholder { @content; }
+    ::-moz-placeholder { @content; }
+    :-ms-input-placeholder { @content; }
+    :-moz-placeholder { @content; }
+}

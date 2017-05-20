@@ -1,0 +1,40 @@
+.c-navbar {
+    position: fixed;
+    font-size: 12px;
+
+    a {
+        padding: 16px 28px;
+    }
+
+    li {
+        display: inline-block;
+    }
+}
+
+.c-navbar__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: $header-height;
+}
+
+.c-navbar__middle {
+    flex-shrink: 0;
+    text-align: center;
+
+    &:first-child { text-align: left; }
+    &:last-child { text-align: right; }
+}
+
+.c-navbar__side--first {
+    order: -1;
+}
+
+.c-navbar__side {
+    flex: 1 1 50%;
+
+    &:nth-child(2):nth-last-child(2),
+    &:last-child:nth-child(2) {
+        text-align: right;
+    }
+}

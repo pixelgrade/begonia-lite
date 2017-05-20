@@ -1,0 +1,28 @@
+.site-footer {
+  display: flex;
+  float: left;
+  flex-direction: row;
+  align-items: baseline;
+  text-align: left;
+  background-color: $color-accent;
+  padding: 0 80px;
+  height: 80px;
+  width: 100%;
+  color: $color-white;
+
+  @include below(lap){
+    padding: 30px;
+  }
+
+  a {
+    color: $color-white;
+  }
+}
+
+section.widget {
+  flex-basis: 100%;
+}
+
+  h2.widget-title {
+    color: $color-white;
+}

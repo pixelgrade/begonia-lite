@@ -1,0 +1,42 @@
+$baseline-unit:             16px                !default;
+$baseline-grid:             false               !default;
+$baseline-grid-color:       rgba(0,0,0,0.1)     !default;
+$baseline-debug:            false               !default;
+
+@if $baseline-debug == true {
+    html {
+        height: 100%;
+        background-size: $baseline-unit $baseline-unit;
+    }
+}
+
+@mixin baseline($baseline-font-size: 16px, $baseline-line-height: 1, $cap-height-ratio: 0.72, $units: 3) {
+
+    $baseline-distance: ($baseline-line-height - $cap-height-ratio) / 2;
+
+    // set the proper font-size and line-height to size the element in multiples of baseline units
+    // font-size: ($baseline-font-size / $baseline-unit) * 1rem;
+    line-height: $baseline-line-height;
+
+    padding-top: calc(1rem - #{$baseline-distance * 1em});
+    padding-bottom: calc(1rem - #{$baseline-distance * 1em});
+    margin-bottom: ($units - 2) * 1rem;
+
+    @if $baseline-debug == true {
+        position: relative;
+
+        &:after {
+            content: "";
+
+            position: absolute;
+            top: calc(100% - 1rem);
+            left: 0;
+            z-index: -1;
+
+            width: 100%;
+            height: $units * 1rem;
+
+            background: rgba(adjust-hue(#F00, $units * 70), 0.5);
+        }
+    }
+}

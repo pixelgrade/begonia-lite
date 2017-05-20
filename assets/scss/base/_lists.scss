@@ -1,0 +1,46 @@
+%dl,
+%ul,
+%ol {
+    margin-left: 10px;
+}
+
+/* Definition Lists */
+%dl {
+    display: flex;
+    flex-wrap: wrap;
+
+    dt,
+    dd {
+
+    }
+
+    dt {
+        font-weight: bold;
+        flex-basis: 33%;
+    }
+
+    dd {
+        flex-basis: 66%;
+    }
+}
+
+/* Unordered Lists */
+%ul {
+    list-style-type: disc;
+    line-height: 24px;
+}
+
+
+/* Ordered Lists */
+%ol {
+    list-style-type: decimal;
+    line-height: 24px;
+}
+
+ul > li {
+    @extend ul;
+}
+
+ol > li {
+    @extend ol;
+}

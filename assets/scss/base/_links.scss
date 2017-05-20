@@ -1,0 +1,41 @@
+%link {
+
+    &:active {
+
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:visited {
+
+    }
+}
+
+button, html [type="button"], [type="reset"], [type="submit"] {
+    background: $color-accent;
+    order: 4;
+    max-width: 300px;
+
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: $color-white;
+    text-transform: uppercase;
+    background-color: $color-accent;
+    box-sizing: border-box;
+    padding: 20px;
+    border-width: 0;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+
+    a {
+        @extend %link-style;
+        color: $color-white;
+        display: block;
+        width: 100%;
+        padding: 20px;
+    }
+}

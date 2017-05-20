@@ -1,0 +1,106 @@
+/*
+Theme Name: Begonia
+Theme URI: https://demos.pixelgrade.com/begonia/
+Author: PixelGrade
+Author URI: https://pixelgrade.com
+Description: Some lovely description of your theme here.
+Version: 0.0.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: begonia
+Domain Path: /languages/
+Tags: grid-layout, blog, photography
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Begonia is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/**
+ *
+ * Table of Contents
+ *
+ * 1.0 - Reset
+ * 2.0 - Base Styles
+ * 3.0 - Abstractions
+ * 4.0 - Components
+ * 5.0 - Utility
+ * 6.0 - Layout
+ * 7.0 - Hacks and Overrides
+ *
+ */
+
+@import "settings";
+
+@import "tools/functions";
+@import "tools/mixins";
+
+@import "tools/wp-offset";
+@import "tools/baseline";
+
+/**
+ * 1.0 - Reset
+ */
+@import "generic/normalize";
+@import "generic/reset";
+
+/**
+ * 2.0 - Base Styles
+ */
+@import "tools/typeline";
+
+@import "base/blockquote";
+@import "base/forms";
+@import "base/lists";
+@import "base/links";
+@import "base/pre";
+@import "base/table";
+@import "base/titles";
+@import "base/typography";
+
+@import "base/wp-align";
+
+/**
+ * 3.0 - Abstractions
+ */
+// @import "objects/_dummy-object";
+
+// @import "objects/grid";
+
+/**
+ * 4.0 - Components
+ */
+// @import "components/_dummy-component";
+
+// @import "components/btn";
+
+// @import "components/navbar/navbar";
+// @import "components/burger";
+
+@import "components/hero";
+@import "components/header";
+@import "components/footer";
+@import "components/widgets";
+@import "components/toolbar";
+@import "components/card";
+
+/**
+ * 5.0 - Utility Classes
+ */
+@import "utility/widths";
+
+/**
+ * 6.0 - Layout
+ */
+@import "layout/archive";
+@import "layout/page";
+@import "layout/single";
+
+/**
+ * 7.0 - Hacks and Overrides
+ */
+@import "shame";

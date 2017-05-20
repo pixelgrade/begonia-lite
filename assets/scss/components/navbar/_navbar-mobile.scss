@@ -1,0 +1,77 @@
+
+$navbar-mobile-width:               calc(100% - 100px)      !default;
+$navbar-mobile-padding:             16px                    !default;
+$navbar-mobile-background:          #FFFFFF                 !default;
+$navbar-mobile-transition-speed:    300ms                   !default;
+
+.c-navbar {
+
+}
+
+.c-navbar__container {
+    position: absolute;
+    top: 0;
+    left: -100%;
+
+    width: $navbar-mobile-width;
+    height: 100vh;
+    padding: 16px;
+    border-right: 1px solid $light;
+    overflow-y: auto;
+
+    background: $navbar-mobile-background;
+    box-shadow: $navbar-mobile-box-shadow;
+
+    transition: left $navbar-mobile-transition-speed;
+
+    -webkit-overflow-scrolling: touch;
+
+
+    .c-navbar__checkbox:checked ~ & {
+        left: 0;
+    }
+}
+
+.c-navbar__label,
+.c-navbar__middle {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: left $navbar-mobile-transition-speed;
+}
+
+.c-navbar__label {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.c-navbar__label {
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    > * {
+        flex-shrink: 0;
+    }
+
+    .c-navbar__checkbox:checked + & {
+        left: $navbar-mobile-width;
+    }
+}
+
+.c-navbar__middle {
+    z-index: -1;
+    display: none;
+    width: 100%;
+    border-bottom: 1px solid $light;
+
+    background: white;
+
+    .c-navbar__checkbox:checked ~ * & {
+        left: 0;
+    }
+}
+

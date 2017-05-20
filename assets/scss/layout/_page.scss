@@ -1,0 +1,29 @@
+body {
+  margin-left: 80px;
+  overflow-x: hidden;
+
+  @include below(lap){
+    margin-left: 0;
+  }
+}
+
+.page, .error404 {
+  .site-title a {
+    color: $color-accent;
+  }
+
+  .site-header {
+    height: 300px;
+  }
+
+  .site-content {
+    width: 100%;
+    margin: 0 auto;
+
+    .content-area {
+      max-width: 1440px;
+      padding: 80px;
+
+    }
+  }
+}

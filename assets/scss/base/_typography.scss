@@ -1,0 +1,71 @@
+$font-size:             16px            !default;
+$line-height:           1.5             !default;
+
+// just set the desired baseline unit here
+// so we can use rem units to multiply it
+html {
+    font-size: percentage($baseline-unit/16px);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+body * {
+    font-family: overpass, sans-serif;
+}
+
+b,
+strong {
+    font-weight: 400;
+}
+
+em,
+i,
+small {
+    font-style: italic;
+}
+
+@mixin render-typography-styles() {
+    h1          { @extend %h1           !optional; }
+    h2          { @extend %h2           !optional; }
+    h3          { @extend %h3           !optional; }
+    h4          { @extend %h4           !optional; }
+    h5          { @extend %h5           !optional; }
+    h6          { @extend %h6           !optional; }
+
+    p           { @extend %p            !optional; }
+
+    a           { @extend %link         !optional; }
+
+    blockquote  { @extend %blockquote   !optional; }
+    pre         { @extend %pre          !optional; }
+    table       { @extend %table        !optional; }
+
+    dl          { @extend %dl           !optional; }
+    ul          { @extend %ul           !optional; }
+    ol          { @extend %ol           !optional; }
+}
+
+.wrap {
+    // These are technically the same, but use both
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    -ms-word-break: break-all;
+    // This is the dangerous one in WebKit, as it breaks things wherever
+    word-break: break-all;
+    // Instead use this non-standard one:
+    word-break: break-word;
+
+    // Adds a hyphen where the word breaks, if supported (No Blink)
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+@include render-typography-styles();

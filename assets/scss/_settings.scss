@@ -1,0 +1,71 @@
+
+// Settings
+// ==============================
+
+// typography settings
+$font-size:             16px;
+$line-height:           1.5;
+
+// baseline
+$baseline-unit:         16px;
+
+// colors
+$color-white:           #FFFFFF;
+$color-dark:            #313131;
+$color-gray:            #757575;
+$color-light-grey:      #F6F6F6;
+$color-smoke-grey:      #D1D1D1;
+$color-accent:          #0300FF;
+
+// fonts
+$headings-font:         'Overpass', sans-serif;;
+$body-font:             'Overpass', sans-serif;;
+$meta-font:             'Overpass', sans-serif;;
+
+
+// Debug settings
+$debug:                 false;
+$baseline-debug:        $debug;
+
+// mobile first means we need min-width media queries
+$breakpoints: (
+    small:              500px,
+    lap:                900px,
+    desk:               1280px
+);
+
+// https://css-tricks.com/handling-z-index/
+$zindex: (
+    modal:              9000,
+    dropdown:           8000,
+    header:             7000,
+    overlay:            6000,
+    footer:             5000
+);
+
+// typeline
+$typeline-points:       0 1.2, 50 1.6, 200 1.8;
+$typeline-breakpoints:  900px 780px 500px;
+$typeline-rules: (
+    '%fs12': 12px,
+    '%fs14': 14px,
+    '%fs18': 18px,
+    '%fs24': 24px,
+    '%fs32': 32px,
+    '%fs50': 50px,
+    '%fs80': 80px,
+    '%fs200': 200px,
+
+);
+
+// misc
+$transition--micro:     .15s;
+$transition--macro:     .3s;
+
+@font-face {
+  font-family: 'overpass';
+  src: url('assets/fonts/overpass/overpass-regular.eot');
+  src: url('assets/fonts/overpass/overpass-regular.woff2') format('woff2'),
+  url('assets/fonts/overpass/overpass-regular.woff') format('woff'),
+  url('assets/fonts/overpass/overpass-regular.ttf')  format('truetype');
+}

@@ -1,0 +1,40 @@
+$dropdown-background:   #FFFFFF     !default;
+$dropdown-color:        inherit     !default;
+$dropdown-width:        20px        !default;
+
+.c-navbar--dropdown {
+
+    .menu-item-has-children,
+    .page_item_has_children {
+        position: relative;
+    }
+
+    .sub-menu,
+    .children {
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        width: $dropdown-width;
+
+        background: $dropdown-background;
+        color: $dropdown-color;
+
+        text-align: left;
+
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .menu-item:hover > .sub-menu,
+    .page_item:hover > .children {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .sub-menu .sub-menu,
+    .children .children {
+        top: 0;
+        left: 100%;
+    }
+}

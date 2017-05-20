@@ -1,0 +1,60 @@
+.widgets-area {
+  background-color: $color-accent;
+  width: 100%;
+  margin: 0 auto;
+
+  .widget-area {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 40px;
+
+    @include below(small) {
+      padding: 0;
+    }
+
+    .widget {
+      box-sizing: border-box;
+      padding: 40px;
+      outline: 2px solid blue;
+      flex: 1;
+      flex-basis: 25%;
+
+      @include below(small) {
+        padding: 35px;
+      }
+
+      .widget-title {
+        font-size: 32px;
+        padding: 0;
+      }
+
+      .textwidget {
+        color: white;
+      }
+
+      ul {
+        margin: 0;
+      }
+
+      ul > li, span {
+        list-style: none;
+        color: $color-white;
+        margin: 0;
+        line-height: 24px;
+      }
+
+      ul > li > a {
+        color: $color-white;
+        font-size: 17px;
+        font-weight: 300;
+      }
+    }
+
+    .widget_nav_menu ul > li > a {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 36px;
+    }
+  }
+}

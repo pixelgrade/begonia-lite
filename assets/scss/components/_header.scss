@@ -1,0 +1,17 @@
+.site-branding {
+  position: absolute;
+  z-index: 4;
+  margin-left: 80px;
+
+  @include below(small) {
+    margin-left: 35px;
+  }
+}
+
+.site-title a {
+  color: white;
+  text-decoration: none;
+  text-transform: none;
+  line-height: 100px;
+  margin-top:80px;
+}

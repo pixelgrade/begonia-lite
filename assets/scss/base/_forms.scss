@@ -1,0 +1,45 @@
+%input,
+%textarea {
+
+}
+
+%select {
+
+}
+
+
+%radio,
+%checkbox {
+
+}
+
+%button {
+
+}
+
+input[type="text"], input[type="tel"], input[type="number"], input[type="date"], input[type="email"], input[type="password"], input[type="url"] {
+  padding: 13px 19px 15px;
+  border: 1px solid #E0E0E0;
+  border-radius: 0;
+  font-size: 17px;
+  -webkit-font-smoothing: initial;
+  font-family: "PT Serif", serif;
+  width: 100%;
+  max-width: 100%;
+  color: #383C50;
+  font-weight: 300;
+}
+
+textarea {
+  padding: 13px 19px 15px;
+  border: 1px solid #E0E0E0;
+  border-radius: 0;
+  font-size: 17px;
+  -webkit-font-smoothing: initial;
+  font-family: "PT Serif", serif;
+  width: 100%;
+  color: #383C50;
+  font-weight: 300;
+  max-width: 100%;
+  resize: vertical;
+}

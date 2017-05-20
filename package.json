@@ -1,0 +1,20 @@
+{
+  "name": "components",
+  "devDependencies": {
+    "browser-sync": "^2.14.0",
+    "del": "^2.2.2",
+    "fs": "0.0.2",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-concat": "^2.6.0",
+    "gulp-csscomb": "*",
+    "gulp-exec": "^2.1.2",
+    "gulp-help": "^1.6.1",
+    "gulp-iife": "^0.3.0",
+    "gulp-rename": "*",
+    "gulp-rtlcss": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-sass": "*",
+    "gulp-util": "^3.0.7"
+  }
+}

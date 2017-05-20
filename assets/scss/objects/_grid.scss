@@ -1,0 +1,47 @@
+/*
+
+    Grid
+    ====
+
+
+    description:
+    ------------
+    Abstraction used for layout purposes.
+
+
+    expected markup:
+    ----------------
+
+    <div class="o-grid--2col-@small  o-grid--3col-@desk">
+        ...
+    </div>
+
+ */
+
+$breakpoints:       ()      !default;
+
+.o-grid,
+[class^="o-grid--"],
+[class*=" o-grid--"] {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+}
+
+@for $i from 1 through 9 {
+    .o-grid--#{$i}col > * {
+        flex: 0 0 percentage(1/$i);
+        width: percentage(1/$i);
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @media only screen and (min-width: $value) {
+        @for $i from 1 through 9 {
+            .o-grid--#{$i}col-\@#{$breakpoint} > * {
+                flex: 0 0 percentage(1/$i);
+                width: percentage(1/$i);
+            }
+        }
+    }
+}
