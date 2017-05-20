@@ -7,14 +7,14 @@
  * @package Begonia
  */
 
-if ( ! function_exists( 'begonia_setup' ) ) :
+if ( ! function_exists( 'begonia_lite_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 * Note that this function is hooked into the after_setup_theme hook, which
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function begonia_setup() {
+	function begonia_lite_setup() {
 
 		/*
 		 * Make theme available for translation.
@@ -61,9 +61,9 @@ if ( ! function_exists( 'begonia_setup' ) ) :
 			'caption'
 		) );
 	}
-endif; // begonia_setup
+endif; // begonia_lite_setup
 
-add_action( 'after_setup_theme', 'begonia_setup' );
+add_action( 'after_setup_theme', 'begonia_lite_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -72,17 +72,17 @@ add_action( 'after_setup_theme', 'begonia_setup' );
  *
  * @global int $content_width
  */
-function begonia_content_width() {
+function begonia_lite_content_width() {
 	$GLOBALS['content_width'] = apply_filters( '_s_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'begonia_content_width', 0 );
+add_action( 'after_setup_theme', 'begonia_lite_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function begonia_widgets_init() {
+function begonia_lite_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer Sidebar', 'begonia-lite' ),
 		'id'            => 'footer-sidebar',
@@ -93,12 +93,12 @@ function begonia_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'begonia_widgets_init' );
+add_action( 'widgets_init', 'begonia_lite_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function begonia_scripts() {
+function begonia_lite_scripts() {
 	wp_enqueue_style( 'begonia-style', get_stylesheet_uri() );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -107,7 +107,7 @@ function begonia_scripts() {
 
 	wp_enqueue_script( 'begonia-scripts', get_template_directory_uri() . '/assets/js/main.js' );
 }
-add_action( 'wp_enqueue_scripts', 'begonia_scripts' );
+add_action( 'wp_enqueue_scripts', 'begonia_lite_scripts' );
 
 /**
  * Custom template tags for this theme.

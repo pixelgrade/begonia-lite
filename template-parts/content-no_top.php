@@ -20,7 +20,7 @@
 		<?php endif;
 		if ( 'post' === get_post_type() ) : ?>
 			<div class="entry-meta">
-				<?php begonia_posted_on(); ?>
+				<?php begonia_lite_posted_on(); ?>
 			</div><!-- .entry-meta -->
 			<?php
 		endif;

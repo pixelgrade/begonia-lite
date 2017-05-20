@@ -17,7 +17,7 @@
 			<?php endif; ?>
 		</div>
 		<div class="entry-meta">
-			<?php begonia_posted_on(); ?>
+			<?php begonia_lite_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php if ( is_single() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -44,11 +44,11 @@
 				'after'  => '</div>',
 			) );
 			?>
-			<?php begonia_entry_footer(); ?>
+			<?php begonia_lite_entry_footer(); ?>
 		</div><!-- .entry-content -->
 
 		<div class="footer-section">
-			<?php begonia_single_post_navigation(); ?>
+			<?php begonia_lite_single_post_navigation(); ?>
 		</div>
 	</div>
 </article><!-- #post-## -->

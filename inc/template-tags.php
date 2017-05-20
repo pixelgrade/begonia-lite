@@ -7,11 +7,11 @@
  * @package _s
  */
 
-if ( ! function_exists( 'begonia_posted_on' ) ) :
+if ( ! function_exists( 'begonia_lite_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function begonia_posted_on() { ?>
+function begonia_lite_posted_on() { ?>
 	<div class="hero_categories">
 			<?php
 			//Display the categories of the post
@@ -47,11 +47,11 @@ function begonia_posted_on() { ?>
 }
 endif;
 
-if ( ! function_exists( 'begonia_entry_footer' ) ) :
+if ( ! function_exists( 'begonia_lite_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
-function begonia_entry_footer() {
+function begonia_lite_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
@@ -80,7 +80,7 @@ function begonia_entry_footer() {
 }
 endif;
 
-function begonia_single_post_navigation() {
+function begonia_lite_single_post_navigation() {
 	echo '<div class="navigation_posts">';
 
 	$prevPost = get_previous_post( true );

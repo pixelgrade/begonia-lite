@@ -33,7 +33,7 @@
 			the_title( '<h1 class="c-hero__entry-title">', '</h1>' );
 			if ( 'post' === get_post_type() ) : ?>
 				<div class="c-hero__entry-meta">
-					<?php begonia_posted_on(); ?>
+					<?php begonia_lite_posted_on(); ?>
 				</div><!-- .entry-meta -->
 				<?php
 			endif; ?>

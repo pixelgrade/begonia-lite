@@ -1,13 +1,13 @@
 /*
-Theme Name: Begonia
-Theme URI: https://demos.pixelgrade.com/begonia/
+Theme Name: Begonia Lite
+Theme URI: https://demos.pixelgrade.com/begonia-lite/
 Author: PixelGrade
 Author URI: https://pixelgrade.com
 Description: Some lovely description of your theme here.
-Version: 0.0.2
+Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: begonia
+Text Domain: begonia lite
 Domain Path: /languages/
 Tags: grid-layout, blog, photography
 This theme, like WordPress, is licensed under the GPL.
@@ -108,7 +108,8 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -331,7 +332,8 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -366,7 +368,8 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
@@ -444,7 +447,8 @@ template {
   display: none; }
 
 *, *:before, *:after {
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 body,
 h1, h2, h3, h4, h5, h6,
@@ -574,6 +578,7 @@ ol > li {
 
 /* Definition Lists */
 dl {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -601,22 +606,26 @@ a:hover {
 
 button, html [type="button"], [type="reset"], [type="submit"] {
   background: #0300FF;
-  -ms-flex-order: 4;
-      order: 4;
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
   max-width: 300px;
-  -ms-flex-align: start;
-      align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   text-align: center;
   cursor: default;
   color: #FFFFFF;
   text-transform: uppercase;
   background-color: #0300FF;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 20px;
   border-width: 0;
   border-style: outset;
   border-color: buttonface;
-  border-image: initial; }
+  -o-border-image: initial;
+     border-image: initial; }
   button a, html [type="button"] a, [type="reset"] a, [type="submit"] a {
     color: #FFFFFF;
     display: block;
@@ -746,12 +755,16 @@ small {
  */
 .c-hero {
   position: relative;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-  -ms-flex-flow: column nowrap;
-      flex-flow: column nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   min-height: 100vh;
   margin-bottom: 80px;
   padding-bottom: 80px;
@@ -804,30 +817,38 @@ button a, html [type="button"] a, [type="reset"] a, [type="submit"] a, .c-hero__
 .c-hero__image {
   width: 100%;
   height: 100%;
-  object-fit: cover; }
+  -o-object-fit: cover;
+     object-fit: cover; }
 
 .c-hero__wrap {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: left;
-      align-items: left;
-  -ms-flex-pack: left;
-      justify-content: left;
-  -ms-flex-flow: column nowrap;
-      flex-flow: column nowrap;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   z-index: 3; }
 
 .c-hero__entry-title {
-  -ms-flex-order: 2;
-      order: 2;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
   margin-bottom: 0; }
 
 h1.c-hero__entry-title {
   color: #FFFFFF; }
 
 .c-hero__content {
-  -ms-flex-order: 3;
-      order: 3; }
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3; }
   .c-hero__content p {
     color: #FFFFFF;
     max-width: 428px;
@@ -835,8 +856,9 @@ h1.c-hero__entry-title {
     margin-bottom: 48px; }
 
 .c-hero__entry-meta, .entry-meta {
-  -ms-flex-order: 1;
-      order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   margin-bottom: 32px; }
   .c-hero__entry-meta .hero_categories, .c-hero__entry-meta .posted-on, .entry-meta .hero_categories, .entry-meta .posted-on {
     display: inline; }
@@ -847,8 +869,9 @@ h1.c-hero__entry-title {
 .c-hero_read_more,
 .hero_read_more {
   background: #0300FF;
-  -ms-flex-order: 4;
-      order: 4;
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
   margin-top: 48px;
   max-width: 300px; }
   .c-hero_read_more a,
@@ -877,13 +900,17 @@ h1.c-hero__entry-title {
   margin-top: 80px; }
 
 .site-footer {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   float: right;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-align: baseline;
-      align-items: baseline;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   text-align: right;
   background-color: #0300FF;
   padding: 0 80px;
@@ -909,20 +936,25 @@ h2.widget-title {
   margin: 0 auto; }
   .widgets-area .widget-area {
     position: relative;
+    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     padding: 40px; }
     @media screen and (max-width: 500px) {
       .widgets-area .widget-area {
         padding: 0; } }
     .widgets-area .widget-area .widget {
-      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
       padding: 40px;
       outline: 2px solid blue;
-      -ms-flex: 1;
-          flex: 1;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
       -ms-flex-preferred-size: 25%;
           flex-basis: 25%; }
       @media screen and (max-width: 500px) {
@@ -1030,7 +1062,8 @@ h2.widget-title {
     right: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; }
+    -o-object-fit: cover;
+       object-fit: cover; }
 
 .c-card .entry-content {
   max-width: 428px; }
@@ -1047,7 +1080,8 @@ article:nth-child(1) .c-hero__image {
   padding: 2px 25px;
   margin: 4px 20px;
   display: inline-block;
-  transform: rotate(-180deg); }
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg); }
 
 .read-more--arrow {
   display: inline;
@@ -1244,9 +1278,11 @@ body {
   overflow: hidden;
   height: 300px; }
   .single-post .entry-thumbnail img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 100%;
-    object-position: 50% 50%; }
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%; }
   .single-post .entry-thumbnail:before {
     content: "";
     display: block;
@@ -1271,19 +1307,24 @@ body {
   width: 100%;
   padding-left: 80px;
   margin: 0 auto;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
   .single-post .single-post-content .entry-content {
     max-width: 600px;
     margin-right: 80px;
+    display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    -ms-flex-direction: column;
-        flex-direction: column; }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
     .single-post .single-post-content .entry-content img {
       max-width: calc(600px + 100%); }
     .single-post .single-post-content .entry-content .tags-links {
@@ -1300,13 +1341,17 @@ body {
     margin: 80px 0px 80px 80px; }
   .single-post .single-post-content .footer-section {
     display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
     -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-flow: row wrap;
     -ms-flex: 100%;
     -ms-flex-pack: justify;
     -ms-flex-align: baseline;
-    align-items: flex-end; }
+    -webkit-box-align: end;
+            align-items: flex-end; }
   .single-post .single-post-content .navigation_posts {
     max-width: 600px; }
     .single-post .single-post-content .navigation_posts .nav-box {
@@ -1398,25 +1443,31 @@ body {
     margin-bottom: 8px;
     margin-top: 8px; }
   .comments-area .comment-form {
+    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: row;
-        flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     max-width: 600px; }
     .comments-area .comment-form > * {
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%; }
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 100%;
+              flex: 0 0 100%; }
     .comments-area .comment-form textarea#comment {
       display: block;
       width: 100%;
       max-width: 100%; }
     .comments-area .comment-form .comment-form-author, .comments-area .comment-form .comment-form-email {
-      -ms-flex: 0 0 47%;
-          flex: 0 0 47%; }
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 47%;
+              flex: 0 0 47%; }
     .comments-area .comment-form .form-submit {
       text-align: left;
       margin-top: 20px; }
