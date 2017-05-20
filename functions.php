@@ -20,7 +20,7 @@ if ( ! function_exists( 'begonia_setup' ) ) :
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 */
-		load_theme_textdomain( 'begonia', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'begonia-lite', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -45,8 +45,8 @@ if ( ! function_exists( 'begonia_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in three locations.
 		register_nav_menus( array(
-			'primary'   => __( 'Primary Menu', 'begonia' ),
-			'social'    => __( 'Social Menu', 'begonia' ),
+			'primary'   => __( 'Primary Menu', 'begonia-lite' ),
+			'social'    => __( 'Social Menu', 'begonia-lite' ),
 		) );
 
 		/*
@@ -84,9 +84,9 @@ add_action( 'after_setup_theme', 'begonia_content_width', 0 );
  */
 function begonia_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Sidebar', 'begonia' ),
+		'name'          => esc_html__( 'Footer Sidebar', 'begonia-lite' ),
 		'id'            => 'footer-sidebar',
-		'description'   => esc_html__( 'Add widgets here.', 'begonia' ),
+		'description'   => esc_html__( 'Add widgets here.', 'begonia-lite' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',

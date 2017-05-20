@@ -38,16 +38,16 @@
 		// Check the content for the more text
 		$has_more = strpos( $post->post_content, '<!--more' );
 		if ( $has_more ) {
-			the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'begonia' ) );
+			the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'begonia-lite' ) );
 		} else {
 			the_excerpt(); ?>
             <div class="hero_read_more">
-                <a href="<?php the_permalink(); ?>"><?php _e( 'Read More', 'begonia' ); ?><div class="read-more--arrow"></div></a>
+                <a href="<?php the_permalink(); ?>"><?php _e( 'Read More', 'begonia-lite' ); ?><div class="read-more--arrow"></div></a>
             </div>
 			<?php
 		}
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'begonia' ),
+			'before' => '<div class="page-links">' . __( 'Pages:', 'begonia-lite' ),
 			'after'  => '</div>',
 		) ); ?>
     </div><!-- .entry-content -->

@@ -20,7 +20,7 @@ function begonia_posted_on() { ?>
 			$output     = '';
 			if ( $categories ) {
 				foreach ( $categories as $category ) {
-					$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'begonia' ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
+					$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'begonia-lite' ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
 				}
 				echo trim( $output, $separator );
 			} ?>
@@ -40,7 +40,7 @@ function begonia_posted_on() { ?>
 			esc_html( get_the_modified_date() )
 		);
 		$posted_on = sprintf(
-			_x( '%s', 'post date', 'begonia' ),
+			_x( '%s', 'post date', 'begonia-lite' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 		echo '<span class="posted-on">' . $posted_on . '</span>';
@@ -55,23 +55,23 @@ function begonia_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ' ', 'begonia' ) );
+		$tags_list = get_the_tag_list( '', esc_html__( ' ', 'begonia-lite' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tags: %1$s', 'begonia' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links">' . esc_html__( 'Tags: %1$s', 'begonia-lite' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
 		/* translators: %s: post title */
-		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'begonia' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
+		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'begonia-lite' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
 		echo '</span>';
 	}
 
 	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'begonia' ),
+			esc_html__( 'Edit %s', 'begonia-lite' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
 		'<span class="edit-link">',
