@@ -788,13 +788,15 @@ small {
 .c-hero__wrap {
   height: 100%;
   text-align: right;
-  margin-right: 95px; }
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%; }
   @media screen and (max-width: 500px) {
     .c-hero__wrap {
       margin-right: 35px; } }
 
 button a, html [type="button"] a, [type="reset"] a, [type="submit"] a, .c-hero__entry-meta .hero_categories a, .c-hero__entry-meta .posted-on a, .entry-meta .hero_categories a, .entry-meta .posted-on a, .c-hero_read_more a,
-.hero_read_more a, .toolbar-navigation .nav--main .menu-item a, nav.pagination .nav-links, nav.pagination .nav-links .prev, .single-post .single-post-content .entry-content .tags-links a, .single-post .single-post-content .navigation_posts .nav-box a, .comments-area .comment-list .reply a {
+.hero_read_more a, nav.pagination .nav-links, nav.pagination .nav-links .prev, .single-post .single-post-content .entry-content .tags-links a, .single-post .single-post-content .navigation_posts .nav-box a, .comments-area .comment-list .reply a {
   text-transform: uppercase;
   color: #0300FF;
   text-decoration: none; }
@@ -868,18 +870,49 @@ h1.c-hero__entry-title {
 
 .c-hero_read_more,
 .hero_read_more {
-  background: #0300FF;
+  position: relative;
   -webkit-box-ordinal-group: 5;
       -ms-flex-order: 4;
           order: 4;
   margin-top: 48px;
-  max-width: 300px; }
+  max-width: 300px;
+  background: #0300FF; }
   .c-hero_read_more a,
   .hero_read_more a {
     color: #FFFFFF;
     display: block;
     width: 100%;
-    padding: 20px; }
+    padding: 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: bold; }
+    .c-hero_read_more a:before,
+    .hero_read_more a:before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      top: 50%;
+      width: 84px;
+      height: 2px;
+      left: 30px;
+      background-color: #FFFFFF; }
+      @media screen and (max-width: 500px) {
+        .c-hero_read_more a:before,
+        .hero_read_more a:before {
+          width: 30px; } }
+    .c-hero_read_more a:after,
+    .hero_read_more a:after {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      top: 43%;
+      vertical-align: middle;
+      border: solid #fff;
+      border-width: 0 0 3px 3px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      padding: 4px;
+      left: 30px; }
 
 .site-description {
   display: none; }
@@ -981,50 +1014,6 @@ h2.widget-title {
       font-weight: bold;
       line-height: 36px; }
 
-.toolbar-navigation {
-  position: absolute;
-  width: 100vh;
-  height: 80px;
-  top: 0.75em;
-  right: 0;
-  bottom: 0;
-  display: block;
-  background: #f6f6f6;
-  z-index: 1;
-  -webkit-transform-origin: right top;
-  -webkit-transform: rotate(90deg) translateX(99%);
-  transform-origin: right top;
-  transform: rotate(90deg) translateX(99%); }
-  @media screen and (max-width: 900px) {
-    .toolbar-navigation {
-      display: none; } }
-  .toolbar-navigation .nav--main {
-    display: block;
-    margin: 0 auto;
-    padding-left: 80px; }
-    .toolbar-navigation .nav--main .menu-item {
-      list-style: none;
-      margin-left: 15px;
-      float: left;
-      height: 100%;
-      line-height: 75px;
-      margin-right: 0; }
-      .toolbar-navigation .nav--main .menu-item a {
-        font-size: 24px;
-        line-height: 36px;
-        white-space: nowrap;
-        text-transform: none; }
-      .toolbar-navigation .nav--main .menu-item:after {
-        content: "";
-        border-bottom: 3px solid #0300FF;
-        display: inline-block;
-        width: 50px;
-        vertical-align: middle;
-        margin-right: 15px;
-        margin-top: -10px; }
-    .toolbar-navigation .nav--main :nth-child(1):after {
-      display: none; }
-
 /*general cards styling */
 .c-card {
   height: 100%;
@@ -1084,29 +1073,7 @@ article:nth-child(1) .c-hero__image {
           transform: rotate(-180deg); }
 
 .read-more--arrow {
-  display: inline;
-  float: left; }
-  .read-more--arrow:before {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    border-top: solid 3px #fff;
-    width: 84px;
-    height: 2px; }
-    @media screen and (max-width: 500px) {
-      .read-more--arrow:before {
-        width: 30px; } }
-  .read-more--arrow:after {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    border: solid #fff;
-    border-width: 0 0 3px 3px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    margin-right: -16px;
-    margin-left: 10px;
-    padding: 6px; }
+  display: none; }
 
 /**
  * 5.0 - Utility Classes
