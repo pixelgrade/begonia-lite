@@ -99,31 +99,5 @@ article:nth-child(1) {
 }
 
 .read-more--arrow {
-    display: inline;
-    float: right;
-
-    &:before {
-        content: "";
-        display: inline-block;
-        vertical-align: middle;
-        border-top: solid 3px #fff;
-        width: 84px;
-        height: 2px;
-
-        @include below(small){
-            width: 30px;
-        }
-    }
-    &:after {
-        content: "";
-        display: inline-block;
-        vertical-align: middle;;
-        border: solid #fff;
-        border-width: 0 3px 3px 0;
-        transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-        margin-left: -16px;
-        margin-right:10px;
-        padding: 6px;
-    }
+ display: none;
 }
