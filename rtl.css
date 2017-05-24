@@ -1005,17 +1005,17 @@ h2.widget-title {
       font-weight: bold;
       line-height: 36px; }
 
-.site-navigation {
+.main-navigation {
   position: absolute;
   display: block;
   top: 58px;
   left: 70px;
   z-index: 3; }
-  .site-navigation ul.nav--main, .site-navigation ul > li.nav--main {
+  .main-navigation ul.nav--main, .main-navigation ul > li.nav--main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    .site-navigation ul.nav--main > li, .site-navigation ul > li.nav--main > li {
+    .main-navigation ul.nav--main > li, .main-navigation ul > li.nav--main > li {
       list-style: none; }
 
 /*general cards styling */
