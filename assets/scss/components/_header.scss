@@ -1,7 +1,7 @@
 .site-branding {
   position: absolute;
   z-index: 4;
-  margin-left: 80px;
+  margin-left: 70px;
 
   @include below(small) {
     margin-left: 35px;
@@ -13,5 +13,6 @@
   text-decoration: none;
   text-transform: none;
   line-height: 100px;
-  margin-top:80px;
+  margin-top:16px;
+  font-size: 160px;
 }

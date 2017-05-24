@@ -1,6 +1,4 @@
 body {
-  margin-left: 80px;
-  overflow-x: hidden;
 
   @include below(lap){
     margin-left: 0;

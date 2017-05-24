@@ -7,7 +7,6 @@
 
     min-height: 100vh;
     margin-bottom: 80px;
-    padding-bottom: 80px;
 
     text-align: center;
 
@@ -69,12 +68,12 @@
     align-items: left;
     justify-content: left;
     flex-flow: column nowrap;
+    padding: 0 70px 80px;
     z-index: 3;
     @extend %c-hero_left;
 }
 
 .c-hero__entry-title {
-    order: 2;
     margin-bottom: 0;
 }
 
@@ -94,7 +93,6 @@ h1.c-hero__entry-title {
 }
 
 .c-hero__entry-meta, .entry-meta{
-    order: 1;
     margin-bottom: 32px;
 
     .hero_categories, .posted-on {
@@ -110,8 +108,6 @@ h1.c-hero__entry-title {
 .c-hero_read_more,
 .hero_read_more {
     position: relative;
-    order: 4;
-    margin-top: 48px;
     max-width: 300px;
     background: $color-accent;
 

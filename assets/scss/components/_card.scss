@@ -1,4 +1,4 @@
-$card-padding:         40px                 !default;
+$card-padding:         35px                 !default;
 $card-background:      transparent          !default;
 $card-color:           transparent          !default;
 $card-border-width:    0px                  !default;
@@ -78,7 +78,7 @@ $card-radius:          0                    !default;
 
 article:nth-child(1) {
     .c-hero__image {
-       width: 100vw !important;
+       width: 100% !important;
     }
 }
 .entry-title a {

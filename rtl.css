@@ -767,7 +767,6 @@ small {
           flex-flow: column nowrap;
   min-height: 100vh;
   margin-bottom: 80px;
-  padding-bottom: 80px;
   text-align: center; }
   @media screen and (max-width: 500px) {
     .c-hero {
@@ -836,12 +835,10 @@ button a, html [type="button"] a, [type="reset"] a, [type="submit"] a, .c-hero__
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
+  padding: 0 70px 80px;
   z-index: 3; }
 
 .c-hero__entry-title {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
   margin-bottom: 0; }
 
 h1.c-hero__entry-title {
@@ -858,9 +855,6 @@ h1.c-hero__entry-title {
     margin-bottom: 48px; }
 
 .c-hero__entry-meta, .entry-meta {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
   margin-bottom: 32px; }
   .c-hero__entry-meta .hero_categories, .c-hero__entry-meta .posted-on, .entry-meta .hero_categories, .entry-meta .posted-on {
     display: inline; }
@@ -871,10 +865,6 @@ h1.c-hero__entry-title {
 .c-hero_read_more,
 .hero_read_more {
   position: relative;
-  -webkit-box-ordinal-group: 5;
-      -ms-flex-order: 4;
-          order: 4;
-  margin-top: 48px;
   max-width: 300px;
   background: #0300FF; }
   .c-hero_read_more a,
@@ -920,7 +910,7 @@ h1.c-hero__entry-title {
 .site-branding {
   position: absolute;
   z-index: 4;
-  margin-right: 80px; }
+  margin-right: 70px; }
   @media screen and (max-width: 500px) {
     .site-branding {
       margin-right: 35px; } }
@@ -930,7 +920,8 @@ h1.c-hero__entry-title {
   text-decoration: none;
   text-transform: none;
   line-height: 100px;
-  margin-top: 80px; }
+  margin-top: 16px;
+  font-size: 160px; }
 
 .site-footer {
   display: -webkit-box;
@@ -1014,12 +1005,25 @@ h2.widget-title {
       font-weight: bold;
       line-height: 36px; }
 
+.toolbar-navigation {
+  position: absolute;
+  display: block;
+  top: 58px;
+  left: 70px;
+  z-index: 3; }
+  .toolbar-navigation ul.nav--main, .toolbar-navigation ul > li.nav--main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .toolbar-navigation ul.nav--main > li, .toolbar-navigation ul > li.nav--main > li {
+      list-style: none; }
+
 /*general cards styling */
 .c-card {
   height: 100%;
   display: inline-block;
   vertical-align: top;
-  padding: 40px;
+  padding: 35px;
   color: transparent;
   background: transparent;
   /*cards setup */ }
@@ -1058,7 +1062,7 @@ h2.widget-title {
   max-width: 428px; }
 
 article:nth-child(1) .c-hero__image {
-  width: 100vw !important; }
+  width: 100% !important; }
 
 .entry-thumbnail {
   margin-bottom: 32px; }
@@ -1172,7 +1176,7 @@ generate utility classes that forces a certain width to the element the classes 
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 40px; }
+  padding: 0 35px; }
   @media screen and (max-width: 500px) {
     .main-posts {
       padding: 0 20px; } }
@@ -1212,12 +1216,9 @@ nav.pagination {
       color: #313131;
       font-size: 17px; }
 
-body {
-  margin-right: 80px;
-  overflow-x: hidden; }
-  @media screen and (max-width: 900px) {
-    body {
-      margin-right: 0; } }
+@media screen and (max-width: 900px) {
+  body {
+    margin-right: 0; } }
 
 .page .site-title a, .error404 .site-title a {
   color: #0300FF; }

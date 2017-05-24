@@ -1,0 +1,15 @@
+.toolbar-navigation {
+  position: absolute;
+  display: block;
+  top: 58px;
+  right: 70px;
+  z-index: 3;
+
+  ul.nav--main {
+    display: flex;
+
+    > li {
+      list-style: none;
+    }
+  }
+}
