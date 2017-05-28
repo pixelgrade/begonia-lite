@@ -1,9 +1,13 @@
 .main-navigation {
   z-index: 3;
+  margin-top: 60px;
+  width: 40%;
   @extend %link-style;
 
   ul.nav--main {
     display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
 
     > li {
       list-style: none;

@@ -36,11 +36,11 @@
   .entry-title {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 40px 80px;
+    padding: 0 70px 48px 70px;
   }
 
   .entry-meta {
-    padding: 75px 0 30px 80px;
+    padding: 80px 0 30px 80px;
     max-width: 1440px;
     margin: 0 auto;
   }
@@ -66,6 +66,13 @@
 
       > p:not(.intro) {
         margin-bottom: 32px;
+      }
+
+      a {
+        color: $color-accent;
+        text-decoration: none;
+        font-weight: bold;
+
       }
 
       .tags-links {

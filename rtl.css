@@ -600,12 +600,12 @@ dl {
 /* Unordered Lists */
 ul, ul > li {
   list-style-type: disc;
-  line-height: 24px; }
+  line-height: 30px; }
 
 /* Ordered Lists */
 ol, ol > li {
   list-style-type: decimal;
-  line-height: 24px; }
+  line-height: 30px; }
 
 a:hover {
   text-decoration: underline; }
@@ -947,7 +947,8 @@ h1.c-hero__entry-title {
           justify-content: space-between;
   padding: 0 70px; }
   .site-header .site-branding {
-    z-index: 4; }
+    z-index: 4;
+    margin-top: 36px; }
   .site-header .site-title a {
     color: white;
     text-decoration: none;
@@ -1041,11 +1042,17 @@ h2.widget-title {
       line-height: 36px; }
 
 .main-navigation {
-  z-index: 3; }
+  z-index: 3;
+  margin-top: 60px;
+  width: 40%; }
   .main-navigation ul.nav--main, .main-navigation ul > li.nav--main {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-left: 10px; }
     .main-navigation ul.nav--main > li, .main-navigation ul > li.nav--main > li {
       list-style: none; }
       .main-navigation ul.nav--main > li > a, .main-navigation ul > li.nav--main > li > a {
@@ -1312,10 +1319,10 @@ nav.pagination {
 .single-post .entry-title {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 40px 80px; }
+  padding: 0 70px 48px 70px; }
 
 .single-post .entry-meta {
-  padding: 75px 80px 30px 0;
+  padding: 80px 80px 30px 0;
   max-width: 1440px;
   margin: 0 auto; }
 
@@ -1346,6 +1353,10 @@ nav.pagination {
       max-width: calc(600px + 100%); }
     .single-post .single-post-content .entry-content > p:not(.intro) {
       margin-bottom: 32px; }
+    .single-post .single-post-content .entry-content a {
+      color: #0300FF;
+      text-decoration: none;
+      font-weight: bold; }
     .single-post .single-post-content .entry-content .tags-links {
       color: #0300FF;
       text-transform: uppercase;
