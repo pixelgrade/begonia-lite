@@ -69,3 +69,11 @@ $transition--macro:     .3s;
   url('assets/fonts/overpass/overpass-regular.woff') format('woff'),
   url('assets/fonts/overpass/overpass-regular.ttf')  format('truetype');
 }
+
+@font-face {
+  font-family: 'overpasslight';
+  src: url('assets/fonts/overpass/overpass-light.woff2') format('woff2'),
+  url('assets/fonts/overpass/overpass-light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

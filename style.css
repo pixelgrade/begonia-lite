@@ -37,6 +37,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   src: url("assets/fonts/overpass/overpass-regular.eot");
   src: url("assets/fonts/overpass/overpass-regular.woff2") format("woff2"), url("assets/fonts/overpass/overpass-regular.woff") format("woff"), url("assets/fonts/overpass/overpass-regular.ttf") format("truetype"); }
 
+@font-face {
+  font-family: 'overpasslight';
+  src: url("assets/fonts/overpass/overpass-light.woff2") format("woff2"), url("assets/fonts/overpass/overpass-light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 /**
  * 1.0 - Reset
  */
@@ -766,7 +772,7 @@ small {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   min-height: 100vh;
-  margin-bottom: 80px;
+  margin-bottom: 35px;
   text-align: center; }
   @media screen and (max-width: 500px) {
     .c-hero {
@@ -1064,16 +1070,18 @@ h2.widget-title {
 .c-card .entry-content a > p {
   padding-bottom: 48px;
   font-size: 16px;
-  font-weight: 300;
-  color: #757575; }
+  color: #313131;
+  font-family: 'overpasslight'; }
 
 article:nth-child(1) .c-hero__image {
   width: 100% !important; }
 
 .entry-title {
   padding: 0; }
-  .entry-title a:hover {
-    text-decoration: none; }
+  .entry-title a {
+    color: #424242; }
+    .entry-title a:hover {
+      text-decoration: none; }
 
 .entry-thumbnail {
   margin-bottom: 32px; }
