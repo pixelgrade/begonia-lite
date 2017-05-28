@@ -885,7 +885,10 @@ h1.c-hero__entry-title {
     display: inline; }
     .c-hero__entry-meta .hero_categories a, .c-hero__entry-meta .posted-on a, .entry-meta .hero_categories a, .entry-meta .posted-on a {
       font-size: 14px;
-      font-weight: bold; }
+      font-weight: bold;
+      color: #FFFFFF; }
+  .c-hero__entry-meta .separator:after, .entry-meta .separator:after {
+    border-top: 2px solid #FFFFFF; }
 
 .c-hero_read_more,
 .hero_read_more {

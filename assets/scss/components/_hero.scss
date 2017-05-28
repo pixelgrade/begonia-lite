@@ -100,7 +100,11 @@ h1.c-hero__entry-title {
             @extend %link-style;
             font-size: 14px;
             font-weight: bold;
+            color: $color-white;
         }
+    }
+    .separator:after {
+        border-top: 2px solid $color-white;
     }
 }
 
