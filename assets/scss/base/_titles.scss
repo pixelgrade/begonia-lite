@@ -5,7 +5,7 @@
     @include baseline();
 }
 
-%margin-bottom{
+%margin-bottom-48{
  margin-bottom: 48px;
 }
 
@@ -22,25 +22,25 @@
 %h1 {
     @extend %heading;
     @extend %fs50 !optional;
-    @extend %margin-bottom;
+    @extend %margin-bottom-48;
 }
 
 %h2 {
     @extend %heading;
     @extend %fs32 !optional;
-    @extend %margin-bottom;
+    @extend %margin-bottom-48;
 }
 
 %h3 {
     @extend %heading;
     @extend %fs24 !optional;
-    @extend %margin-bottom;
+    @extend %margin-bottom-48;
 }
 
 %h4 {
     @extend %heading;
     @extend %fs18 !optional;
-    @extend %margin-bottom;
+    @extend %margin-bottom-48;
 }
 
 %h5 {
@@ -55,9 +55,12 @@
     margin-bottom: 16px;
 }
 
-.lead {
+.intro, .lead {
     font-size: 20px;
-    @extend %margin-bottom;
+    font-weight: 300;
+    line-height: 30px;
+    color: #383C50;
+    @extend %margin-bottom-48;
 }
 
 .dropcap {
@@ -71,6 +74,39 @@
 
 p, a, ul, li {
     font-size: 17px;
-    color: #383C50;
+    color: $color-dark;
+    line-height: 26px;
     text-decoration: none;
+}
+
+blockquote {
+
+    margin: 80px 0;
+
+    > p:not(:last-child),
+    > p:nth-child(1) {
+        color: $color-accent;
+        font-size: 50px;
+        font-weight: bold;
+        line-height: 77px;
+
+        &:before {
+            content: "\201C";
+        }
+        &:after {
+            content: "\201D";
+        }
+    }
+
+    cite {
+        display: inline-block;
+        color: $color-dark;
+        font-size: 14px;
+        font-weight: bold;
+        font-style: normal;
+        letter-spacing: 1px;
+        line-height: 22px;
+        text-transform: uppercase;
+        margin-top: 48px;
+    }
 }

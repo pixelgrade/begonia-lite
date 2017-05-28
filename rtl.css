@@ -675,7 +675,7 @@ table th, table td {
   padding-bottom: calc(1rem - 0.14em);
   margin-bottom: 1rem; }
 
-h1, h2, h3, h4, .lead {
+h1, h2, h3, h4, .intro, .lead {
   margin-bottom: 48px; }
 
 .h0 {
@@ -690,8 +690,11 @@ h5 {
 h6 {
   margin-bottom: 16px; }
 
-.lead {
-  font-size: 20px; }
+.intro, .lead {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  color: #383C50; }
 
 .dropcap {
   float: right;
@@ -703,8 +706,34 @@ h6 {
 
 p, a, ul, ul > li, li {
   font-size: 17px;
-  color: #383C50;
+  color: #313131;
+  line-height: 26px;
   text-decoration: none; }
+
+blockquote {
+  margin: 80px 0; }
+  blockquote > p:not(:last-child),
+  blockquote > p:nth-child(1) {
+    color: #0300FF;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 77px; }
+    blockquote > p:not(:last-child):before,
+    blockquote > p:nth-child(1):before {
+      content: "\201C"; }
+    blockquote > p:not(:last-child):after,
+    blockquote > p:nth-child(1):after {
+      content: "\201D"; }
+  blockquote cite {
+    display: inline-block;
+    color: #313131;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 1px;
+    line-height: 22px;
+    text-transform: uppercase;
+    margin-top: 48px; }
 
 html {
   font-size: 100%;
@@ -1315,6 +1344,8 @@ nav.pagination {
             flex-direction: column; }
     .single-post .single-post-content .entry-content img {
       max-width: calc(600px + 100%); }
+    .single-post .single-post-content .entry-content > p:not(.intro) {
+      margin-bottom: 32px; }
     .single-post .single-post-content .entry-content .tags-links {
       color: #0300FF;
       text-transform: uppercase;
