@@ -830,7 +830,9 @@ button a, html [type="button"] a, [type="reset"] a, [type="submit"] a, .c-hero__
     text-decoration: none; }
 
 h1.c-hero__entry-title {
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  line-height: 50px;
+  padding: 0; }
 
 .c-hero__content {
   -webkit-box-ordinal-group: 4;
@@ -1056,16 +1058,22 @@ h2.widget-title {
     -o-object-fit: cover;
        object-fit: cover; }
 
-.c-card .entry-content {
-  max-width: 428px; }
-  .c-card .entry-content a:hover {
-    text-decoration: none; }
+.c-card .entry-content a:hover {
+  text-decoration: none; }
+
+.c-card .entry-content a > p {
+  padding-bottom: 48px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #757575; }
 
 article:nth-child(1) .c-hero__image {
   width: 100% !important; }
 
-.entry-title a:hover {
-  text-decoration: none; }
+.entry-title {
+  padding: 0; }
+  .entry-title a:hover {
+    text-decoration: none; }
 
 .entry-thumbnail {
   margin-bottom: 32px; }

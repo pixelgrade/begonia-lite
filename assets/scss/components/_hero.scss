@@ -76,6 +76,8 @@ $background-gradient: linear-gradient(180deg, rgba(1,29,255,0.5) 0%, rgba(248,21
 
 h1.c-hero__entry-title {
     color: $color-white;
+    line-height: 50px;
+    padding: 0;
 }
 
 .c-hero__content {
