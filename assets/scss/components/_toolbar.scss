@@ -4,12 +4,19 @@
   top: 58px;
   right: 70px;
   z-index: 3;
+  @extend %link-style;
 
   ul.nav--main {
     display: flex;
 
     > li {
       list-style: none;
+
+      > a {
+        color: $color-white;
+        text-decoration: none;
+        text-transform: capitalize;
+      }
     }
   }
 }
