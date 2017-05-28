@@ -74,6 +74,9 @@ $card-radius:          0                    !default;
 
 .c-card .entry-content {
     max-width: 428px;
+    a:hover {
+        text-decoration: none;
+    }
 }
 
 article:nth-child(1) {
@@ -83,6 +86,10 @@ article:nth-child(1) {
 }
 .entry-title a {
     @extend %fs50 !optional;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .entry-thumbnail {

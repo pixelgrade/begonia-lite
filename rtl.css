@@ -790,9 +790,6 @@ small {
   max-width: 1440px;
   margin: 0 auto;
   width: 100%; }
-  @media screen and (max-width: 500px) {
-    .c-hero__wrap {
-      margin-right: 35px; } }
 
 button a, html [type="button"] a, [type="reset"] a, [type="submit"] a, .c-hero__entry-meta .hero_categories a, .c-hero__entry-meta .posted-on a, .entry-meta .hero_categories a, .entry-meta .posted-on a, .c-hero_read_more a,
 .hero_read_more a, .main-navigation, nav.pagination .nav-links, nav.pagination .nav-links .prev, .single-post .single-post-content .entry-content .tags-links a, .single-post .single-post-content .navigation_posts .nav-box a, .comments-area .comment-list .reply a {
@@ -900,21 +897,29 @@ h1.c-hero__entry-title {
 
 .site-header {
   max-width: 1440px;
-  margin: 0 auto; }
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 70px; }
   .site-header .site-branding {
-    position: absolute;
-    z-index: 4;
-    margin-right: 70px; }
-    @media screen and (max-width: 500px) {
-      .site-header .site-branding {
-        margin-right: 35px; } }
+    z-index: 4; }
   .site-header .site-title a {
     color: white;
     text-decoration: none;
     text-transform: none;
     line-height: 137px;
-    margin-top: 16px;
-    font-size: 160px; }
+    margin-top: 16px; }
+    @media only screen and (min-width: 900px) {
+      .site-header .site-title a {
+        font-size: 160px; } }
 
 .site-footer {
   display: -webkit-box;
@@ -999,10 +1004,6 @@ h2.widget-title {
       line-height: 36px; }
 
 .main-navigation {
-  position: absolute;
-  display: block;
-  top: 58px;
-  left: 70px;
   z-index: 3; }
   .main-navigation ul.nav--main, .main-navigation ul > li.nav--main {
     display: -webkit-box;
@@ -1057,9 +1058,14 @@ h2.widget-title {
 
 .c-card .entry-content {
   max-width: 428px; }
+  .c-card .entry-content a:hover {
+    text-decoration: none; }
 
 article:nth-child(1) .c-hero__image {
   width: 100% !important; }
+
+.entry-title a:hover {
+  text-decoration: none; }
 
 .entry-thumbnail {
   margin-bottom: 32px; }
@@ -1255,7 +1261,8 @@ nav.pagination {
     z-index: 2;
     height: 300px;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.3); }
+    background: -webkit-gradient(linear, right top, right bottom, from(rgba(1, 29, 255, 0.5)), to(rgba(248, 215, 232, 0.59))), -webkit-gradient(linear, right top, right bottom, from(rgba(8, 0, 255, 0.66)), to(rgba(134, 48, 250, 0.69)));
+    background: linear-gradient(-180deg, rgba(1, 29, 255, 0.5) 0%, rgba(248, 215, 232, 0.59) 100%), linear-gradient(-180deg, rgba(8, 0, 255, 0.66) 0%, rgba(134, 48, 250, 0.69) 100%); }
 
 .single-post .entry-title {
   max-width: 1440px;
