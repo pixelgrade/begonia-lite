@@ -10,7 +10,7 @@
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 35px;
+  padding: 0 35px 140px 35px;
 
   @include below(small){
     padding: 0 20px;
@@ -29,7 +29,7 @@ nav.pagination {
   width: 100%;
   max-width: 1440px;
   margin:0 auto;
-  padding: 40px 0 80px 0;
+  padding: 40px 0 70px 0;
   font-weight: bold;
   font-size: 16px;
   color: $color-accent;

@@ -716,7 +716,10 @@ p, a, ul, ul > li, li {
   text-decoration: none; }
 
 a:hover {
-  text-decoration: none; }
+  text-decoration: none;
+  opacity: .8;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out; }
 
 blockquote {
   margin: 80px 0; }
@@ -1257,7 +1260,7 @@ generate utility classes that forces a certain width to the element the classes 
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 35px; }
+  padding: 0 35px 140px 35px; }
   @media screen and (max-width: 500px) {
     .main-posts {
       padding: 0 20px; } }
@@ -1271,7 +1274,7 @@ nav.pagination {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 40px 0 80px 0;
+  padding: 40px 0 70px 0;
   font-weight: bold;
   font-size: 16px;
   color: #0300FF; }

@@ -80,6 +80,8 @@ p, a, ul, li {
 
 a:hover {
     text-decoration: none;
+    opacity: .8;
+    transition: opacity 0.2s ease-in-out;
 }
 
 blockquote {
