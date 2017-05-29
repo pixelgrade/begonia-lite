@@ -710,6 +710,9 @@ p, a, ul, ul > li, li {
   line-height: 26px;
   text-decoration: none; }
 
+a:hover {
+  text-decoration: none; }
+
 blockquote {
   margin: 80px 0; }
   blockquote > p:not(:last-child),
@@ -1062,6 +1065,10 @@ h2.widget-title {
         color: #FFFFFF;
         text-decoration: none;
         text-transform: capitalize; }
+
+@media only screen and (min-width: 900px) {
+  .menu-toggle {
+    display: none; } }
 
 /*general cards styling */
 .c-card {

@@ -4,6 +4,9 @@
  * @package Begonia
  */ ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<?php _e( '', 'begonia-lite' ); ?>
+				</button>
 				<h5 class="screen-reader-text"><?php _e( 'Main navigation', 'begonia-lite' ); ?></h5>
 				<?php
 				wp_nav_menu(

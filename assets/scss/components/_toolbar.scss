@@ -20,3 +20,10 @@
     }
   }
 }
+
+
+.menu-toggle {
+  @include above(lap) {
+    display: none;
+  }
+}

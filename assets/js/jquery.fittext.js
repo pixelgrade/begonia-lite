@@ -1,6 +1,3 @@
-;(function(window, document, $) {
-"use strict";
-
 /*global jQuery */
 /*!
 * FitText.js 1.2
@@ -44,4 +41,3 @@
   };
 
 })( jQuery );
-}(window, document, jQuery));
