@@ -9,8 +9,7 @@
     flex-flow: row wrap;
     max-width: 1440px;
     margin: 0 auto;
-
-    padding: 40px;
+    padding: 30px;
 
     @include below(small) {
       padding: 0;

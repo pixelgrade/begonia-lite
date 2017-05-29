@@ -1,6 +1,9 @@
 ;(function(window, document, $) {
 "use strict";
 
+jQuery(document).ready(function($) {
+    jQuery(".site-title > a").fitText(.4, { minFontSize: '20px', maxFontSize: '180px' });
+});
 /*global jQuery */
 /*!
 * FitText.js 1.2

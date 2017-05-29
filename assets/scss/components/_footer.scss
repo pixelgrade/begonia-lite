@@ -1,21 +1,21 @@
 .site-footer {
   display: flex;
-  float: left;
   flex-direction: row;
   align-items: baseline;
   text-align: left;
   background-color: $color-accent;
-  padding: 0 80px;
+  padding: 0 70px;
   height: 80px;
-  width: 100%;
   color: $color-white;
-  max-width: 1440px;
-  margin:0 auto;
 
   @include below(lap){
     padding: 30px;
   }
-
+  .site-info {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+  }
   a {
     color: $color-white;
   }

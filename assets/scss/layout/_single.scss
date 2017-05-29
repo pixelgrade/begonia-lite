@@ -40,7 +40,7 @@
   }
 
   .entry-meta {
-    padding: 80px 0 30px 80px;
+    padding: 70px 0 30px 70px;
     max-width: 1440px;
     margin: 0 auto;
   }
@@ -56,7 +56,7 @@
 
     .entry-content {
       max-width: 600px;
-      margin-left: 80px;
+      margin-left: 70px;
       display: inline-flex;
       flex-direction: column;
 
@@ -76,17 +76,20 @@
       }
 
       .tags-links {
-        color: $color-accent;
         text-transform: uppercase;
         word-spacing: 5px;
         font-size: 14px;
         margin-top: 80px;
         font-weight: bold;
         letter-spacing: 1px;
+        color: $color-dark;
 
-        a {
+        > a {
           @extend %link-style;
+          color: $color-accent;
           font-size: 14px;
+          padding: 0 13px;
+
         }
       }
     }
@@ -120,7 +123,6 @@
 
           .prev-title, .next-title {
             font-size: 18px;
-            margin-bottom: 26px;
             line-height: 27px;
             text-transform: none;
             color: #313131;
@@ -130,7 +132,7 @@
 
           }
           .prev, .next {
-            text-transform: uppercase;
+            text-transform: none;
             color: $color-accent;
             font-size: 70px;
             line-height: 108px;
@@ -167,7 +169,7 @@
   .comments-area {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 80px;
+    padding: 70px 70px 140px 70px;
     color: $color-accent;
 
     h2.comments-title {

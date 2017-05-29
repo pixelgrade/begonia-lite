@@ -1,7 +1,7 @@
 .site-header {
-  max-width: 1440px;
   position: absolute;
   display: flex;
+  max-width: 1440px;
   width: 100%;
   left: 0;
   right: 0;
@@ -12,6 +12,7 @@
   .site-branding {
     z-index: 4;
     margin-top: 36px;
+    width: 60%;
   }
 
   .site-title a {

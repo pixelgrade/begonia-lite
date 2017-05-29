@@ -29,7 +29,7 @@
 
 }
 
-$background-gradient-archive: linear-gradient(180deg, rgba(1,29,255,0.5) 0%, rgba(248,215,232,0.59) 100%), linear-gradient(180deg, rgba(8,0,255,0.66) 0%, rgba(134,48,250,0.69) 100%);
+$background-gradient-archive: linear-gradient(180deg, rgba(1,29,255,0.4) 0%, rgba(248,215,232,0.4) 100%), linear-gradient(180deg, rgba(8,0,255,0.4) 0%, rgba(134,48,250,0.4) 100%);
 $background-gradient-single: linear-gradient(180deg, rgba(3,26,204,0.79) 0%, rgba(97,48,250,0.68) 100%);
 
 %link-style {
@@ -72,6 +72,13 @@ $background-gradient-single: linear-gradient(180deg, rgba(3,26,204,0.79) 0%, rgb
     a:hover {
         text-decoration: none;
     }
+    .hero_categories > a, .posted-on > a{
+        color: $color-white;
+    }
+
+    .separator:after {
+        border-top: 2px solid $color-white;
+    }
 }
 
 h1.c-hero__entry-title {
@@ -100,11 +107,7 @@ h1.c-hero__entry-title {
             @extend %link-style;
             font-size: 14px;
             font-weight: bold;
-            color: $color-white;
         }
-    }
-    .separator:after {
-        border-top: 2px solid $color-white;
     }
 }
 
