@@ -982,7 +982,9 @@ h1.c-hero__entry-title {
   padding: 0 80px;
   height: 80px;
   width: 100%;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  max-width: 1440px;
+  margin: 0 auto; }
   @media screen and (max-width: 900px) {
     .site-footer {
       padding: 30px; } }
@@ -1009,6 +1011,8 @@ h2.widget-title {
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
+    max-width: 1440px;
+    margin: 0 auto;
     padding: 40px; }
     @media screen and (max-width: 500px) {
       .widgets-area .widget-area {
