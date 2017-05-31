@@ -997,7 +997,8 @@ h1.c-hero__entry-title {
   .site-footer .site-info {
     max-width: 1440px;
     width: 100%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding: 0 70px; }
   .site-footer a {
     color: #FFFFFF; }
 
@@ -1369,7 +1370,7 @@ nav.pagination {
       -ms-flex-pack: start;
           justify-content: flex-start; }
   .single-post .single-post-content .entry-content {
-    max-width: 600px;
+    width: 50%;
     margin-left: 70px;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -1378,8 +1379,16 @@ nav.pagination {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
+    .single-post .single-post-content .entry-content figure {
+      max-width: calc(600px + 100%) !important;
+      width: auto;
+      overflow: hidden; }
     .single-post .single-post-content .entry-content img {
-      max-width: calc(600px + 100%); }
+      max-width: calc(600px + 100%);
+      width: auto;
+      overflow: hidden; }
+    .single-post .single-post-content .entry-content p > img {
+      padding: 48px 48px 48px 0px; }
     .single-post .single-post-content .entry-content > p:not(.intro) {
       margin-bottom: 32px; }
     .single-post .single-post-content .entry-content a {
@@ -1398,8 +1407,6 @@ nav.pagination {
         color: #0300FF;
         font-size: 14px;
         padding: 0 13px; }
-  .single-post .single-post-content .entry-content p > img {
-    margin: 48px 48px 48px 0px; }
   .single-post .single-post-content .footer-section {
     display: -ms-flexbox;
     display: -webkit-box;

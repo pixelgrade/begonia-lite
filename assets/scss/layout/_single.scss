@@ -55,13 +55,23 @@
     justify-content: flex-start;
 
     .entry-content {
-      max-width: 600px;
+      width: 50%;
       margin-left: 70px;
       display: inline-flex;
       flex-direction: column;
 
+      figure {
+        max-width: calc(600px + 100%) !important;
+        width: auto;
+        overflow: hidden;
+      }
       img {
         max-width: calc(600px + 100%);
+        width: auto;
+        overflow: hidden;
+      }
+      p > img {
+        padding: 48px 48px 48px 0px;
       }
 
       > p:not(.intro) {
@@ -94,9 +104,6 @@
       }
     }
 
-    .entry-content p > img {
-      margin: 48px 48px 48px 0px;
-    }
     .footer-section {
       display: -ms-flexbox;
       display: flex;
