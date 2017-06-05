@@ -1,13 +1,23 @@
+.site-main {
+  width: 100%;
+  margin:0 auto;
+
+  .entry-title {
+    max-width: $container-max-width;
+    margin: 0 auto;
+  }
+
+  .entry-content {
+    max-width: $container-max-width;
+    margin: 0 auto;
+  }
+}
+
 .single-post {
 
   .site-title a {
     color: $color-white;
   }
-
- .site-main {
-   max-width: 100%;
-   margin:0 auto;
- }
 
   .entry-thumbnail {
     margin-bottom: 0px;
@@ -30,23 +40,22 @@
       width: 100%;
       background: $background-gradient-single;
     }
-
   }
 
   .entry-title {
-    max-width: 1440px;
+    max-width: $container-max-width;
     margin: 0 auto;
     padding: 0 70px 48px 70px;
   }
 
   .entry-meta {
     padding: 70px 0 30px 70px;
-    max-width: 1440px;
+    max-width: $container-max-width;
     margin: 0 auto;
   }
 
   .single-post-content {
-    max-width: 1440px;
+    max-width: $container-max-width;
     width: 100%;
     padding-right: 80px;
     margin: 0 auto;
@@ -55,23 +64,33 @@
     justify-content: flex-start;
 
     .entry-content {
-      width: 50%;
+      max-width: 600px;
+      width: 100%;
       margin-left: 70px;
       display: inline-flex;
       flex-direction: column;
 
+      > p {
+        margin-bottom: 32px
+      }
+      @include above(lap){
+        min-width: 600px;
+      }
       figure {
-        max-width: calc(600px + 100%) !important;
-        width: auto;
-        overflow: hidden;
+        max-width: $container-max-width;
+        max-width: calc(600px + 100%);
+
+        width: 100% !important;
+        margin: 80px auto;
+
+        &.alignright, &.alignleft {
+          padding: 0;
+        }
       }
       img {
         max-width: calc(600px + 100%);
         width: auto;
         overflow: hidden;
-      }
-      p > img {
-        padding: 48px 48px 48px 0px;
       }
 
       > p:not(.intro) {
@@ -174,7 +193,7 @@
 
   /* Comments area */
   .comments-area {
-    max-width: 1440px;
+    max-width: $container-max-width;
     margin: 0 auto;
     padding: 70px 70px 140px 70px;
     color: $color-accent;

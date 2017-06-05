@@ -7,7 +7,7 @@
     position: relative;
     display: flex;
     flex-flow: row wrap;
-    max-width: 1440px;
+    max-width: $container-max-width;
     margin: 0 auto;
     padding: 30px;
 

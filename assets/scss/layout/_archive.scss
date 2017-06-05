@@ -7,7 +7,7 @@
 }
 
 .main-posts {
-  max-width: 1440px;
+  max-width: $container-max-width;
   width: 100%;
   margin: 0 auto;
   padding: 0 35px 140px 35px;
@@ -27,7 +27,7 @@
 nav.pagination {
   display: block;
   width: 100%;
-  max-width: 1440px;
+  max-width: $container-max-width;
   margin:0 auto;
   padding: 40px 0 70px 0;
   font-weight: bold;

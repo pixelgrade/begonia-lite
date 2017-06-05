@@ -9,11 +9,14 @@
 }
 
 .alignleft {
-    float: left;
-    clear: left;
+    padding: 48px 48px 48px 0px;
 }
 
 .alignright {
-    float: right;
-    clear: right;
+    padding: 48px 0px 48px 48px;
+}
+.alignleft, .alignright {
+    position: relative;
+    z-index: 1;
+    max-width: 50%;
 }

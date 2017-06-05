@@ -34,6 +34,9 @@ $breakpoints: (
     desk:               1280px
 );
 
+// Max width
+$container-max-width: 1440px;
+
 // https://css-tricks.com/handling-z-index/
 $zindex: (
     modal:              9000,
