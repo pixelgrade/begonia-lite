@@ -5,12 +5,21 @@
   .entry-title {
     max-width: $container-max-width;
     margin: 0 auto;
+    padding: 0 70px 48px 70px;
   }
 
   .entry-content {
     max-width: $container-max-width;
     margin: 0 auto;
+    padding-left: 70px;
   }
+
+  .entry-meta {
+    padding: 70px 0 30px 70px;
+    max-width: $container-max-width;
+    margin: 0 auto;
+  }
+
 }
 
 .single-post {
@@ -42,22 +51,11 @@
     }
   }
 
-  .entry-title {
-    max-width: $container-max-width;
-    margin: 0 auto;
-    padding: 0 70px 48px 70px;
-  }
-
-  .entry-meta {
-    padding: 70px 0 30px 70px;
-    max-width: $container-max-width;
-    margin: 0 auto;
-  }
 
   .single-post-content {
     max-width: $container-max-width;
     width: 100%;
-    padding-right: 80px;
+    padding-right: 70px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;

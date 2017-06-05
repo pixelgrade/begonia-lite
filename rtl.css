@@ -1321,6 +1321,9 @@ body .page .site-content, body .error404 .site-content {
     max-width: 1440px;
     padding: 80px; }
 
+body .page .entry-title, body .error404 .entry-title {
+  padding: 70px 70px 30px 0; }
+
 body.page .content-area {
   padding: 0; }
 
@@ -1350,8 +1353,14 @@ body.page .entry-thumbnail {
   margin: 0 auto; }
   .site-main .entry-title {
     max-width: 1440px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding: 0 70px 48px 70px; }
   .site-main .entry-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-right: 70px; }
+  .site-main .entry-meta {
+    padding: 70px 70px 30px 0;
     max-width: 1440px;
     margin: 0 auto; }
 
@@ -1379,20 +1388,10 @@ body.page .entry-thumbnail {
     background: -webkit-gradient(linear, right top, right bottom, from(rgba(3, 26, 204, 0.79)), to(rgba(97, 48, 250, 0.68)));
     background: linear-gradient(-180deg, rgba(3, 26, 204, 0.79) 0%, rgba(97, 48, 250, 0.68) 100%); }
 
-.single-post .entry-title {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 70px 48px 70px; }
-
-.single-post .entry-meta {
-  padding: 70px 70px 30px 0;
-  max-width: 1440px;
-  margin: 0 auto; }
-
 .single-post .single-post-content {
   max-width: 1440px;
   width: 100%;
-  padding-left: 80px;
+  padding-left: 70px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
