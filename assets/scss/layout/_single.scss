@@ -1,4 +1,4 @@
-.site-main {
+body:not(.blog) .site-main {
   width: 100%;
   margin:0 auto;
 
@@ -12,6 +12,11 @@
     max-width: $container-max-width;
     margin: 0 auto;
     padding-left: 70px;
+
+    > p {
+      margin-bottom: 32px
+    }
+
   }
 
   .entry-meta {
@@ -68,9 +73,6 @@
       display: inline-flex;
       flex-direction: column;
 
-      > p {
-        margin-bottom: 32px
-      }
       @include above(lap){
         min-width: 600px;
       }
@@ -177,13 +179,6 @@
     .gallery-caption {
       color: $color-accent;
 
-      &:before {
-        content: "";
-        display: inline-block;
-        width: 50px;
-        vertical-align: middle;
-        margin-right: 40px;
-       }
       }
     }
 
@@ -300,3 +295,13 @@
 
 
 
+/* Temp fix */
+.clearfix:after, .grid:after, .comment-form:after, .widget_categories > ul:after, .widget_pages > ul:after,
+.widget_meta > ul:after, .widget_archive > ul:after, .nav:after, .nav--main ul:after, .media:after,
+.main-navigation:after, .single .entry-content:after, .page .entry-content:after,
+.comments-area-title:after, .comment-reply-title:after, .comment-navigation:after,
+.has_sidebar .site-content .container:after, form.contact-form .contact-submit:after {
+  content: "";
+  display: table;
+  clear: both;
+}
