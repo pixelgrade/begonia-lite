@@ -8,16 +8,12 @@ body:not(.blog) .site-main {
     padding: 0 70px 48px 70px;
   }
 
-  div:not(.single-post-content) .entry-content {
+  .type-page > .entry-content {
     max-width: $container-max-width;
     margin: 0 auto;
     padding-left: 70px;
     padding-right: 70px;
-
-    > p {
-      margin-bottom: 32px
-    }
-
+    padding-bottom: 120px;
   }
 
   .entry-meta {
@@ -26,15 +22,23 @@ body:not(.blog) .site-main {
     margin: 0 auto;
   }
 
-  figure {
+  figure:not(.alignright,.alignleft) {
     max-width: $container-max-width;
-
     width: 100% !important;
     margin: 80px auto;
 
-    &.alignright, &.alignleft {
+    /*&.alignright, &.alignleft {
       padding: 0;
-    }
+    }*/
+  }
+
+   p > img:not(.alignright,.alignleft) {
+     width: 100vw;
+     margin-left: calc(-50vw + 50%);
+  }
+
+   p {
+    margin-bottom: 32px
   }
 }
 
@@ -218,6 +222,7 @@ body:not(.blog) .site-main {
         p {
           font-size: 15px;
           margin-top: -15px;
+          margin-bottom: 0;
         }
       }
       .bypostauthor {

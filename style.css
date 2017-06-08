@@ -798,7 +798,7 @@ small {
 .alignleft, .alignright {
   position: relative;
   z-index: 1;
-  width: 50%; }
+  width: 50% !important; }
 
 /**
  * 3.0 - Abstractions
@@ -1079,7 +1079,7 @@ h2.widget-title {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    margin-right: 10px; }
+    text-align: right; }
     .main-navigation ul.nav--main > li, .main-navigation ul > li.nav--main > li {
       list-style: none;
       display: inline-block;
@@ -1360,23 +1360,28 @@ body:not(.blog) .site-main {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 70px 48px 70px; }
-  body:not(.blog) .site-main div:not(.single-post-content) .entry-content {
+  body:not(.blog) .site-main .type-page > .entry-content {
     max-width: 1440px;
     margin: 0 auto;
     padding-left: 70px;
-    padding-right: 70px; }
-    body:not(.blog) .site-main div:not(.single-post-content) .entry-content > p {
-      margin-bottom: 32px; }
+    padding-right: 70px;
+    padding-bottom: 120px; }
   body:not(.blog) .site-main .entry-meta {
     padding: 70px 0 30px 70px;
     max-width: 1440px;
     margin: 0 auto; }
-  body:not(.blog) .site-main figure {
+  body:not(.blog) .site-main figure:not(.alignright):not(.alignleft) {
     max-width: 1440px;
     width: 100% !important;
-    margin: 80px auto; }
-    body:not(.blog) .site-main figure.alignright, body:not(.blog) .site-main figure.alignleft {
-      padding: 0; }
+    margin: 80px auto;
+    /*&.alignright, &.alignleft {
+      padding: 0;
+    }*/ }
+  body:not(.blog) .site-main p > img:not(.alignright):not(.alignleft) {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%); }
+  body:not(.blog) .site-main p {
+    margin-bottom: 32px; }
 
 .single-post .site-title a {
   color: #FFFFFF; }
@@ -1519,7 +1524,8 @@ body:not(.blog) .site-main {
       margin-left: 68px; }
       .comments-area .comment-list .comment-content p {
         font-size: 15px;
-        margin-top: -15px; }
+        margin-top: -15px;
+        margin-bottom: 0; }
     .comments-area .comment-list .bypostauthor {
       margin-bottom: 40px; }
     .comments-area .comment-list .fn {
