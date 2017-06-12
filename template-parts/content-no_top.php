@@ -17,18 +17,20 @@ if ( has_post_thumbnail() ) {
 } ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( $article_class ); ?>>
+
+	<?php if ( has_post_thumbnail() ) : ?>
+
+	<div class="entry-thumbnail">
+		<a class="article__image  article__link" href="<?php the_permalink(); ?>">
+			<?php the_post_thumbnail(); ?>
+		</a><!-- .article__image -->
+	</div>
+
+	<?php endif; ?>
+
 	<header class="entry-header">
 
-		<?php if ( has_post_thumbnail() ) : ?>
-
-			<div class="entry-thumbnail">
-				<a class="article__image  article__link" href="<?php the_permalink(); ?>">
-					<?php the_post_thumbnail(); ?>
-				</a><!-- .article__image -->
-			</div>
-
-		<?php endif;
-		if ( 'post' === get_post_type() ) : ?>
+		<?php if ( 'post' === get_post_type() ) : ?>
 
 			<div class="entry-meta">
 
@@ -36,8 +38,7 @@ if ( has_post_thumbnail() ) {
 
 			</div><!-- .entry-meta -->
 
-			<?php
-		endif;
+		<?php endif;
 		if ( is_single() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
