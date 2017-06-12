@@ -7,9 +7,16 @@
  * @package Begonia
  */
 
-?>
+//get the post thumbnail aspect ratio specific class
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( $class = 'c-card' ); ?>>
+$article_class = 'c-card';
+if ( has_post_thumbnail() ) {
+	$ar_class = begonia_get_post_thumbnail_aspect_ratio_class();
+	$article_class .= ' ';
+	$article_class .= $ar_class;
+} ?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class( $article_class ); ?>>
 	<header class="entry-header">
 
 		<?php if ( has_post_thumbnail() ) : ?>
