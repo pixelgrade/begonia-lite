@@ -686,7 +686,7 @@ h1, h2, h3, h4, .intro, .lead {
 
 .h0 {
   margin-bottom: 80px; }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 560px) {
     .h0 {
       font-size: 83px; } }
 
@@ -821,7 +821,7 @@ small {
   min-height: 100vh;
   margin-bottom: 35px;
   text-align: center; }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 560px) {
     .c-hero {
       margin-bottom: 15px; } }
 
@@ -885,6 +885,9 @@ button a, html [type="button"] a, [type="reset"] a, [type="submit"] a, .c-hero__
     color: #FFFFFF; }
   .c-hero__wrap .separator:after {
     border-top: 2px solid #FFFFFF; }
+  @media screen and (max-width: 560px) {
+    .c-hero__wrap {
+      padding: 0 35px 40px; } }
 
 h1.c-hero__entry-title {
   color: #FFFFFF;
@@ -900,6 +903,9 @@ h1.c-hero__entry-title {
     max-width: 428px;
     width: 100%;
     margin-bottom: 48px; }
+  @media screen and (max-width: 560px) {
+    .c-hero__content .c-hero_read_more {
+      display: none; } }
 
 .c-hero__entry-meta, .entry-meta {
   margin-bottom: 32px; }
@@ -933,7 +939,7 @@ h1.c-hero__entry-title {
       height: 2px;
       left: 30px;
       background: #FFFFFF; }
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 560px) {
         .c-hero_read_more a:before,
         .hero_read_more a:before {
           width: 30px; } }
@@ -1020,6 +1026,8 @@ h2.widget-title {
   background-color: #0300FF;
   width: 100%;
   margin: 0 auto; }
+  .widgets-area > * {
+    color: #FFFFFF; }
   .widgets-area .widget-area {
     position: relative;
     display: -webkit-box;
@@ -1033,7 +1041,7 @@ h2.widget-title {
     margin: 0 auto;
     padding: 30px;
     width: 100%; }
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 560px) {
       .widgets-area .widget-area {
         padding: 0; } }
     .widgets-area .widget-area .widget {
@@ -1046,7 +1054,7 @@ h2.widget-title {
               flex: 1;
       -ms-flex-preferred-size: 25%;
           flex-basis: 25%; }
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 560px) {
         .widgets-area .widget-area .widget {
           padding: 35px; } }
       .widgets-area .widget-area .widget .widget-title {
@@ -1074,6 +1082,9 @@ h2.widget-title {
   z-index: 3;
   margin-top: 60px;
   width: 40%; }
+  @media screen and (max-width: 900px) {
+    .main-navigation {
+      width: auto; } }
   .main-navigation ul.nav--main, .main-navigation ul > li.nav--main {
     display: inherit;
     -webkit-box-pack: end;
@@ -1092,10 +1103,22 @@ h2.widget-title {
         padding: 0 13px;
         letter-spacing: 1px;
         line-height: 27px; }
+    @media screen and (max-width: 900px) {
+      .main-navigation ul.nav--main, .main-navigation ul > li.nav--main {
+        display: none !important; } }
 
-@media only screen and (min-width: 900px) {
-  .menu-toggle {
-    display: none; } }
+.menu-toggle {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 18px;
+  background-color: transparent;
+  border-top: 1px solid white;
+  vertical-align: middle;
+  margin-top: 30px; }
+  @media only screen and (min-width: 900px) {
+    .menu-toggle {
+      display: none; } }
 
 /*general cards styling */
 .c-card {
@@ -1113,9 +1136,23 @@ h2.widget-title {
   @media screen and (max-width: 900px) {
     .c-card:nth-child(n) {
       width: 100%; } }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 560px) {
     .c-card:nth-child(n) {
-      padding: 15px; } }
+      padding: 20px; } }
+  @media screen and (max-width: 900px) {
+    .c-card.portrait .entry-thumbnail {
+      display: block;
+      width: 45%;
+      float: right; }
+    .c-card.portrait .entry-header, .c-card.portrait .entry-content {
+      display: inline-block;
+      margin-right: 35px;
+      width: 45%;
+      float: right; } }
+  @media screen and (max-width: 560px) {
+    .c-card.portrait .entry-thumbnail, .c-card.portrait .entry-header, .c-card.portrait .entry-content {
+      width: 100%;
+      margin-right: 0; } }
 
 .c-card__media img {
   width: 100%;
@@ -1137,14 +1174,15 @@ h2.widget-title {
     -o-object-fit: cover;
        object-fit: cover; }
 
-.c-card .entry-content a:hover {
-  text-decoration: none; }
-
-.c-card .entry-content a > p {
-  padding-bottom: 48px;
-  font-size: 16px;
-  color: #313131;
-  font-weight: 200; }
+.c-card .entry-content {
+  max-width: 420px; }
+  .c-card .entry-content a:hover {
+    text-decoration: none; }
+  .c-card .entry-content a > p {
+    padding-bottom: 48px;
+    font-size: 16px;
+    color: #313131;
+    font-weight: 200; }
 
 article:nth-child(1) .c-hero__image {
   width: 100% !important; }
@@ -1202,7 +1240,7 @@ generate utility classes that forces a certain width to the element the classes 
   -ms-flex-preferred-size: 66.666%;
       flex-basis: 66.666%; }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 560px) {
   .u-one-whole-\@small {
     width: 100%;
     -ms-flex-preferred-size: 100%;
@@ -1270,7 +1308,7 @@ generate utility classes that forces a certain width to the element the classes 
   width: 100%;
   margin: 0 auto;
   padding: 0 35px 140px 35px; }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 560px) {
     .main-posts {
       padding: 0 20px; } }
 

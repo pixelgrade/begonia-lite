@@ -3,6 +3,9 @@
   width: 100%;
   margin: 0 auto;
 
+  >* {
+    color: $color-white;
+  }
   .widget-area {
     position: relative;
     display: flex;

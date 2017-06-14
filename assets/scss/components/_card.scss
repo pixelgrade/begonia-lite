@@ -39,8 +39,31 @@ $card-radius:          0                    !default;
             width: 100%;
         }
 
-        @include below(small){
-            padding: 15px;
+        @include below(small) {
+            padding: 20px;
+        }
+    }
+
+    &.portrait {
+        @include below(lap) {
+            .entry-thumbnail {
+                display: block;
+                width: 45%;
+                float: left;
+            }
+            .entry-header, .entry-content {
+                display: inline-block;
+                margin-left: 35px;
+                width: 45%;
+                float: left;
+
+            }
+        }
+        @include below(small) {
+            .entry-thumbnail, .entry-header, .entry-content  {
+                width: 100%;
+                margin-left:0;
+            }
         }
     }
 }
@@ -73,6 +96,7 @@ $card-radius:          0                    !default;
 }
 
 .c-card .entry-content {
+    max-width: 420px;
     a {
         &:hover {
             text-decoration: none;

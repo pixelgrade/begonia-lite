@@ -4,6 +4,10 @@
   width: 40%;
   @extend %link-style;
 
+  @include below(lap){
+    width: auto;
+  }
+
   ul.nav--main {
     display: inherit;
     justify-content: flex-end;
@@ -24,11 +28,23 @@
         line-height: 27px;
       }
     }
+    @include below(lap) {
+      display: none !important;
+    }
   }
 }
 
 
 .menu-toggle {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 18px;
+  background-color: transparent;
+  border-top: 1px solid white;
+  vertical-align: middle;
+
+  margin-top: 30px;
   @include above(lap) {
     display: none;
   }

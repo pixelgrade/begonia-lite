@@ -79,6 +79,10 @@ $background-gradient-single: linear-gradient(180deg, rgba(3,26,204,0.79) 0%, rgb
     .separator:after {
         border-top: 2px solid $color-white;
     }
+
+    @include below(small) {
+        padding: 0 35px 40px;
+    }
 }
 
 h1.c-hero__entry-title {
@@ -95,6 +99,11 @@ h1.c-hero__entry-title {
         max-width: 428px;
         width: 100%;
         margin-bottom: 48px;
+    }
+    .c-hero_read_more {
+        @include below(small) {
+            display: none;
+        }
     }
 }
 
