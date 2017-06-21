@@ -22,6 +22,11 @@
     line-height: 137px;
     margin-top: 16px;
 
+    @include below(lap){
+      line-height: 1;
+      margin-top: 0;
+    }
+
     @include above(lap){
       font-size: 160px;
     }

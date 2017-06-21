@@ -4,7 +4,7 @@
   width: 40%;
   @extend %link-style;
 
-  @include below(lap){
+  @include below(lap) {
     width: auto;
   }
 
@@ -15,7 +15,7 @@
 
     > li {
       list-style: none;
-      display:inline-block;
+      display: inline-block;
       white-space: nowrap;
 
       > a {
@@ -29,23 +29,54 @@
       }
     }
     @include below(lap) {
-      display: none !important;
+      display: none;
     }
   }
-}
+  @include below(lap) {
+    &.toggled {
+      position: fixed;
+      background-color: rgba(3, 0, 255, 0.9);
+      height: 100vh;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 40px;
+      margin: 0;
+      z-index: 4;
 
+      .nav--toolbar {
+        position: absolute;
+        right: 40px;
+        top: 160px;
+        height: 100vh;
+        margin-top: 0;
+        z-index: 5;
+        display: block;
+        text-align: right;
+        width: 200px;
+      }
 
-.menu-toggle {
-  position: relative;
-  display: inline-block;
-  width: 35px;
-  height: 18px;
-  background-color: transparent;
-  border-top: 1px solid white;
-  vertical-align: middle;
-
-  margin-top: 30px;
-  @include above(lap) {
-    display: none;
+      ul.nav--main > li > a {
+        display: block;
+        padding: 0;
+        font-size: 32px;
+        letter-spacing: 1px;
+        line-height: 56px;
+        text-align: right;
+      }
+    }
   }
-}
+
+    .menu-toggle {
+      position: absolute;
+      right: 40px;
+      top: 70px;
+      background: transparent;
+      padding: 0;
+      z-index: 999;
+
+      @include above(lap) {
+        display: none;
+      }
+    }
+  }

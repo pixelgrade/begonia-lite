@@ -806,6 +806,52 @@ small {
 /**
  * 4.0 - Components
  */
+.c-burger {
+  position: relative;
+  display: block;
+  width: 20px;
+  margin-top: 6.5px;
+  margin-bottom: 6.5px; }
+
+.c-burger__slice {
+  display: block;
+  width: 20px;
+  height: 3px;
+  background: #ffffff; }
+
+.c-burger__slice--top,
+.c-burger__slice--bottom {
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.c-burger__slice--top {
+  -webkit-transform: translateY(-6.5px);
+          transform: translateY(-6.5px); }
+
+.c-burger__slice--bottom {
+  -webkit-transform: translateY(6.5px);
+          transform: translateY(6.5px); }
+
+/*
+Provides a simple transition where the slice in the middle fades out
+and the top and bottom ones rotate to form an X
+ */
+.c-burger--fade .c-burger__slice {
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; }
+
+[id="menu-toggle"]:checked ~ * .c-burger--fade .c-burger__slice--top {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+
+[id="menu-toggle"]:checked ~ * .c-burger--fade .c-burger__slice--middle {
+  opacity: 0; }
+
+[id="menu-toggle"]:checked ~ * .c-burger--fade .c-burger__slice--bottom {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg); }
+
 .c-hero {
   position: relative;
   display: -webkit-box;
@@ -984,6 +1030,10 @@ h1.c-hero__entry-title {
     text-transform: none;
     line-height: 137px;
     margin-top: 16px; }
+    @media screen and (max-width: 900px) {
+      .site-header .site-title a {
+        line-height: 1;
+        margin-top: 0; } }
     @media only screen and (min-width: 900px) {
       .site-header .site-title a {
         font-size: 160px; } }
@@ -1105,20 +1155,45 @@ h2.widget-title {
         line-height: 27px; }
     @media screen and (max-width: 900px) {
       .main-navigation ul.nav--main, .main-navigation ul > li.nav--main {
-        display: none !important; } }
-
-.menu-toggle {
-  position: relative;
-  display: inline-block;
-  width: 35px;
-  height: 18px;
-  background-color: transparent;
-  border-top: 1px solid white;
-  vertical-align: middle;
-  margin-top: 30px; }
-  @media only screen and (min-width: 900px) {
-    .menu-toggle {
-      display: none; } }
+        display: none; } }
+  @media screen and (max-width: 900px) {
+    .main-navigation.toggled {
+      position: fixed;
+      background-color: rgba(3, 0, 255, 0.9);
+      height: 100vh;
+      top: 0;
+      right: 0;
+      left: 0;
+      padding: 40px;
+      margin: 0;
+      z-index: 4; }
+      .main-navigation.toggled .nav--toolbar {
+        position: absolute;
+        left: 40px;
+        top: 160px;
+        height: 100vh;
+        margin-top: 0;
+        z-index: 5;
+        display: block;
+        text-align: left;
+        width: 200px; }
+      .main-navigation.toggled ul.nav--main > li > a, .main-navigation.toggled ul > li.nav--main > li > a {
+        display: block;
+        padding: 0;
+        font-size: 32px;
+        letter-spacing: 1px;
+        line-height: 56px;
+        text-align: left; } }
+  .main-navigation .menu-toggle {
+    position: absolute;
+    left: 40px;
+    top: 70px;
+    background: transparent;
+    padding: 0;
+    z-index: 999; }
+    @media only screen and (min-width: 900px) {
+      .main-navigation .menu-toggle {
+        display: none; } }
 
 /*general cards styling */
 .c-card {
