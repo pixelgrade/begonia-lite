@@ -43,11 +43,15 @@
         margin: 0;
       }
 
-      ul > li, span {
+      ul > li,
+      span {
         list-style: none;
         color: $color-white;
         margin: 0;
         line-height: 24px;
+      }
+      a:link {
+        color: $color-white !important;
       }
 
       ul > li > a {
@@ -62,5 +66,9 @@
       font-weight: bold;
       line-height: 36px;
     }
+  }
+
+  button,gul html [type="button"], [type="reset"], [type="submit"] {
+    padding: 0;
   }
 }

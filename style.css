@@ -1114,11 +1114,14 @@ h2.widget-title {
         color: white; }
       .widgets-area .widget-area .widget ul, .widgets-area .widget-area .widget ul > li {
         margin: 0; }
-      .widgets-area .widget-area .widget ul > li, .widgets-area .widget-area .widget ul > li > li, .widgets-area .widget-area .widget span {
+      .widgets-area .widget-area .widget ul > li, .widgets-area .widget-area .widget ul > li > li,
+      .widgets-area .widget-area .widget span {
         list-style: none;
         color: #FFFFFF;
         margin: 0;
         line-height: 24px; }
+      .widgets-area .widget-area .widget a:link {
+        color: #FFFFFF !important; }
       .widgets-area .widget-area .widget ul > li > a, .widgets-area .widget-area .widget ul > li > li > a {
         color: #FFFFFF;
         font-size: 17px;
@@ -1127,6 +1130,8 @@ h2.widget-title {
       font-size: 24px;
       font-weight: bold;
       line-height: 36px; }
+  .widgets-area button, .widgets-area gul html [type="button"], .widgets-area [type="reset"], .widgets-area [type="submit"] {
+    padding: 0; }
 
 .main-navigation {
   z-index: 3;
@@ -1177,13 +1182,33 @@ h2.widget-title {
         display: block;
         text-align: right;
         width: 200px; }
+      .main-navigation.toggled ul.nav--main > li, .main-navigation.toggled ul > li.nav--main > li {
+        margin-left: 0;
+        display: block; }
       .main-navigation.toggled ul.nav--main > li > a, .main-navigation.toggled ul > li.nav--main > li > a {
-        display: block;
         padding: 0;
         font-size: 32px;
         letter-spacing: 1px;
         line-height: 56px;
-        text-align: right; } }
+        text-align: right; }
+      .main-navigation.toggled .c-burger__slice--middle {
+        position: absolute;
+        right: -9px; }
+        .main-navigation.toggled .c-burger__slice--middle:after {
+          content: "";
+          position: absolute;
+          top: -4px;
+          right: -2px;
+          vertical-align: middle;
+          border: solid #fff;
+          border-width: 0 3px 3px 0;
+          transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
+          padding: 4px; }
+      .main-navigation.toggled a:hover {
+        opacity: 1 !important; }
+      .main-navigation.toggled .menu-toggle {
+        right: 55px; } }
   .main-navigation .menu-toggle {
     position: absolute;
     right: 40px;
@@ -1194,6 +1219,8 @@ h2.widget-title {
     @media only screen and (min-width: 900px) {
       .main-navigation .menu-toggle {
         display: none; } }
+    .main-navigation .menu-toggle:focus {
+      outline: none; }
 
 /*general cards styling */
 .c-card {
