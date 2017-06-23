@@ -21,14 +21,21 @@
     text-transform: none;
     line-height: 137px;
     margin-top: 16px;
+    margin-left: -1%;
+
 
     @include below(lap){
       line-height: 1;
-      margin-top: 0;
+      margin-top: 5px;
+    }
+
+    @include below(small){
+
     }
 
     @include above(lap){
       font-size: 160px;
     }
+
   }
 }

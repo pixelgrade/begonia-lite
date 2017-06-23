@@ -55,8 +55,10 @@ body:not(.blog) .site-main {
     height: 300px;
 
     img {
-      object-fit: cover;
+      object-fit: fill;
       width: 100%;
+      min-width: 500px;
+      min-height: 300px;
       object-position: 50% 50%;
     }
 

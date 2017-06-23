@@ -1,24 +1,42 @@
 .site-footer {
   display: flex;
-  flex-direction: row;
+  position: relative;
+  flex-flow: row wrap;
   align-items: baseline;
   text-align: left;
   background-color: $color-accent;
-  padding: 0 70px;
   height: 80px;
   color: $color-white;
+  padding: 30px 30px 140px 0;
 
-  @include below(lap){
-    padding: 30px;
-  }
   .site-info {
     max-width: $container-max-width;
     width: 100%;
     margin: 0 auto;
-    padding: 0 70px;
+
+    @include below(small){
+      text-align: left;
+      padding-left: 35px;
+    }
+
+    > a:nth-child(1){
+      padding-left: 80px;
+
+      @include below(small){
+        padding-left: 0;
+      }
+    }
   }
+
   a {
     color: $color-white;
+  }
+
+  .sep {
+    @include below(small) {
+      display: block;
+      color: transparent;
+    }
   }
 }
 

@@ -1029,11 +1029,12 @@ h1.c-hero__entry-title {
     text-decoration: none;
     text-transform: none;
     line-height: 137px;
-    margin-top: 16px; }
+    margin-top: 16px;
+    margin-left: -1%; }
     @media screen and (max-width: 900px) {
       .site-header .site-title a {
         line-height: 1;
-        margin-top: 0; } }
+        margin-top: 5px; } }
     @media only screen and (min-width: 900px) {
       .site-header .site-title a {
         font-size: 160px; } }
@@ -1042,28 +1043,38 @@ h1.c-hero__entry-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
   text-align: left;
   background-color: #0300FF;
-  padding: 0 70px;
   height: 80px;
-  color: #FFFFFF; }
-  @media screen and (max-width: 900px) {
-    .site-footer {
-      padding: 30px; } }
+  color: #FFFFFF;
+  padding: 30px 30px 140px 0; }
   .site-footer .site-info {
     max-width: 1440px;
     width: 100%;
-    margin: 0 auto;
-    padding: 0 70px; }
+    margin: 0 auto; }
+    @media screen and (max-width: 560px) {
+      .site-footer .site-info {
+        text-align: left;
+        padding-left: 35px; } }
+    .site-footer .site-info > a:nth-child(1) {
+      padding-left: 80px; }
+      @media screen and (max-width: 560px) {
+        .site-footer .site-info > a:nth-child(1) {
+          padding-left: 0; } }
   .site-footer a {
     color: #FFFFFF; }
+  @media screen and (max-width: 560px) {
+    .site-footer .sep {
+      display: block;
+      color: transparent; } }
 
 section.widget {
   -ms-flex-preferred-size: 100%;
@@ -1532,9 +1543,11 @@ body:not(.blog) .site-main {
   overflow: hidden;
   height: 300px; }
   .single-post .entry-thumbnail img {
-    -o-object-fit: cover;
-       object-fit: cover;
+    -o-object-fit: fill;
+       object-fit: fill;
     width: 100%;
+    min-width: 500px;
+    min-height: 300px;
     -o-object-position: 50% 50%;
        object-position: 50% 50%; }
   .single-post .entry-thumbnail:before {
