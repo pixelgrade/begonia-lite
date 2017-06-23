@@ -3,6 +3,10 @@
   width: 100%;
   margin: 0 auto;
 
+  @include below(small){
+    margin-top: 90px;
+  }
+
   >* {
     color: $color-white;
   }
@@ -68,7 +72,7 @@
     }
   }
 
-  button,gul html [type="button"], [type="reset"], [type="submit"] {
+  button, html [type="button"], [type="reset"], [type="submit"] {
     padding: 0;
   }
 }

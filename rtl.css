@@ -1103,6 +1103,9 @@ h2.widget-title {
   background-color: #0300FF;
   width: 100%;
   margin: 0 auto; }
+  @media screen and (max-width: 560px) {
+    .widgets-area {
+      margin-top: 90px; } }
   .widgets-area > * {
     color: #FFFFFF; }
   .widgets-area .widget-area {
@@ -1157,7 +1160,7 @@ h2.widget-title {
       font-size: 24px;
       font-weight: bold;
       line-height: 36px; }
-  .widgets-area button, .widgets-area gul html [type="button"], .widgets-area [type="reset"], .widgets-area [type="submit"] {
+  .widgets-area button, .widgets-area html [type="button"], .widgets-area [type="reset"], .widgets-area [type="submit"] {
     padding: 0; }
 
 .main-navigation {
@@ -1440,7 +1443,7 @@ generate utility classes that forces a certain width to the element the classes 
   padding: 0 35px 140px 35px; }
   @media screen and (max-width: 560px) {
     .main-posts {
-      padding: 0 15px 70px 15px; } }
+      padding: 80px 15px 70px 15px; } }
 
 .sticky img {
   border-top: 3px solid #0300FF;
@@ -1451,7 +1454,7 @@ nav.pagination {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 40px 0 70px 0;
+  padding: 40px 0 80px 0;
   font-weight: bold;
   font-size: 16px;
   color: #0300FF; }
