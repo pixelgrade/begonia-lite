@@ -1440,7 +1440,7 @@ generate utility classes that forces a certain width to the element the classes 
   padding: 0 35px 140px 35px; }
   @media screen and (max-width: 560px) {
     .main-posts {
-      padding: 0 20px; } }
+      padding: 0 15px 70px 15px; } }
 
 .sticky img {
   border-top: 3px solid #0300FF;
