@@ -780,6 +780,10 @@ small {
 .alignnone,
 .aligncenter {
   display: block; }
+  @media screen and (max-width: 560px) {
+    .alignnone,
+    .aligncenter {
+      padding: 24px 0; } }
 
 .aligncenter {
   margin-left: auto;
@@ -789,16 +793,25 @@ small {
   float: left;
   clear: left;
   padding: 48px 48px 48px 0px; }
+  @media screen and (max-width: 560px) {
+    .alignleft {
+      padding: 24px 0; } }
 
 .alignright {
   float: right;
   clear: right;
   padding: 48px 0px 48px 48px; }
+  @media screen and (max-width: 560px) {
+    .alignright {
+      padding: 24px 0; } }
 
 .alignleft, .alignright {
   position: relative;
   z-index: 1;
   width: 50% !important; }
+  @media screen and (max-width: 560px) {
+    .alignleft, .alignright {
+      width: 100% !important; } }
 
 /**
  * 3.0 - Abstractions
@@ -1020,6 +1033,9 @@ h1.c-hero__entry-title {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 70px; }
+  @media screen and (max-width: 560px) {
+    .site-header {
+      padding: 0 35px; } }
   .site-header .site-branding {
     z-index: 4;
     margin-top: 36px;
@@ -1226,7 +1242,8 @@ h2.widget-title {
     top: 70px;
     background: transparent;
     padding: 0;
-    z-index: 999; }
+    z-index: 999;
+    cursor: pointer; }
     @media only screen and (min-width: 900px) {
       .main-navigation .menu-toggle {
         display: none; } }
@@ -1511,16 +1528,25 @@ body:not(.blog) .site-main {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 70px 48px 70px; }
+    @media screen and (max-width: 560px) {
+      body:not(.blog) .site-main .entry-title {
+        padding: 0 35px 48px 35px; } }
   body:not(.blog) .site-main .type-page > .entry-content {
     max-width: 1440px;
     margin: 0 auto;
     padding-left: 70px;
     padding-right: 70px;
     padding-bottom: 120px; }
+    @media screen and (max-width: 560px) {
+      body:not(.blog) .site-main .type-page > .entry-content {
+        padding: 0 35px 60px 35px; } }
   body:not(.blog) .site-main .entry-meta {
     padding: 70px 0 30px 70px;
     max-width: 1440px;
     margin: 0 auto; }
+    @media screen and (max-width: 560px) {
+      body:not(.blog) .site-main .entry-meta {
+        padding: 35px 0 35px 35px; } }
   body:not(.blog) .site-main figure:not(.alignright):not(.alignleft) {
     max-width: 1440px;
     width: 100% !important;
@@ -1529,8 +1555,7 @@ body:not(.blog) .site-main {
       padding: 0;
     }*/ }
   body:not(.blog) .site-main p > img:not(.alignright):not(.alignleft) {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%); }
+    width: 100%; }
   body:not(.blog) .site-main p {
     margin-bottom: 32px; }
 
@@ -1652,6 +1677,9 @@ body:not(.blog) .site-main {
   margin: 0 auto;
   padding: 70px 70px 140px 70px;
   color: #0300FF; }
+  @media screen and (max-width: 560px) {
+    .comments-area {
+      padding: 35px 35px 70px 35px; } }
   .comments-area h2.comments-title {
     margin-bottom: 10px; }
   .comments-area .comment-list {

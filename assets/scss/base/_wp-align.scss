@@ -1,6 +1,10 @@
 .alignnone,
 .aligncenter {
     display: block;
+
+    @include below(small) {
+        padding: 24px 0;
+    }
 }
 
 .aligncenter {
@@ -12,15 +16,27 @@
     float: left;
     clear: left;
     padding: 48px 48px 48px 0px;
+
+    @include below(small) {
+        padding: 24px 0;
+    }
 }
 
 .alignright {
     float: right;
     clear: right;
     padding: 48px 0px 48px 48px;
+
+    @include below(small) {
+        padding: 24px 0;
+    }
 }
 .alignleft, .alignright {
     position: relative;
     z-index: 1;
     width: 50% !important;
+
+    @include below(small) {
+        width: 100% !important;
+    }
 }

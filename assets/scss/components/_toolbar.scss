@@ -104,6 +104,7 @@
       background: transparent;
       padding: 0;
       z-index: 999;
+      cursor: pointer;
 
       @include above(lap) {
         display: none;
