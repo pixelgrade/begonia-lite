@@ -94,12 +94,21 @@ body:not(.blog) .site-main {
     flex-wrap: wrap;
     justify-content: flex-start;
 
+    @include below(small) {
+      padding-right: 35px;
+    }
+
     .entry-content {
       max-width: 600px;
       width: 100%;
       margin-left: 70px;
       display: inline-flex;
       flex-direction: column;
+
+      @include below(small) {
+        margin-left: 35px;
+      }
+
 
       @include above(lap){
         min-width: 600px;
@@ -149,6 +158,11 @@ body:not(.blog) .site-main {
     .navigation_posts {
       max-width: 600px;
       padding-left: 70px;
+
+      @include below(small) {
+        padding-left: 35px;
+      }
+
       .nav-box {
         display: inline-block;
         max-width: 100%;
