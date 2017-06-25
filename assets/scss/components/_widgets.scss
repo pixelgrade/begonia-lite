@@ -3,10 +3,6 @@
   width: 100%;
   margin: 0 auto;
 
-  @include below(small){
-    margin-top: 90px;
-  }
-
   >* {
     color: $color-white;
   }
@@ -29,6 +25,10 @@
       outline: 2px solid blue;
       flex: 1;
       flex-basis: 25%;
+
+      @include below(lap) {
+        flex-basis: 50%;
+      }
 
       @include below(small) {
         padding: 35px;
