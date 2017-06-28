@@ -722,7 +722,7 @@ a:hover {
   transition: opacity 0.2s ease-in-out; }
 
 blockquote {
-  margin: 80px 0; }
+  margin: 48px 0 16px 0; }
   blockquote > p:not(:last-child),
   blockquote > p:nth-child(1) {
     color: #0300FF;
@@ -738,7 +738,7 @@ blockquote {
     letter-spacing: 1px;
     line-height: 22px;
     text-transform: uppercase;
-    margin-top: 48px; }
+    margin-top: 38px; }
 
 html {
   font-size: 100%;
@@ -1626,7 +1626,7 @@ body:not(.blog) .site-main {
       text-transform: uppercase;
       word-spacing: 5px;
       font-size: 14px;
-      margin-top: 80px;
+      margin-top: 48px;
       font-weight: bold;
       letter-spacing: 1px;
       color: #313131; }
