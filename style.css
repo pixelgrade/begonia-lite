@@ -729,12 +729,6 @@ blockquote {
     font-size: 50px;
     font-weight: bold;
     line-height: 77px; }
-    blockquote > p:not(:last-child):before,
-    blockquote > p:nth-child(1):before {
-      content: "\201C"; }
-    blockquote > p:not(:last-child):after,
-    blockquote > p:nth-child(1):after {
-      content: "\201D"; }
   blockquote cite {
     display: inline-block;
     color: #313131;

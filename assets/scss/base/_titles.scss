@@ -94,13 +94,6 @@ blockquote {
         font-size: 50px;
         font-weight: bold;
         line-height: 77px;
-
-        &:before {
-            content: "\201C";
-        }
-        &:after {
-            content: "\201D";
-        }
     }
 
     cite {
