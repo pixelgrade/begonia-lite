@@ -47,7 +47,7 @@ GNU General Public License for more details.
 
 Begonia Lite bundles the following third-party resources:
 
-Overpass font, Copyright (c) 2016 Red Hat, Inc.
+Overpass font
 License: [OFL](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web)
 Source: https://fonts.google.com/specimen/Overpass
 

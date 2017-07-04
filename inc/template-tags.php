@@ -39,10 +39,7 @@ function begonia_lite_posted_on() { ?>
 			esc_attr( get_the_modified_date( 'c' ) ),
 			esc_html( get_the_modified_date() )
 		);
-		$posted_on = sprintf(
-			_x( '%s', 'post date', 'begonia-lite' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-		);
+		$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>' ;
 		echo '<span class="posted-on">' . $posted_on . '</span>';
 }
 endif;

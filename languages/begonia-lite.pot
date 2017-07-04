@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Begonia Lite 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/begonia\n"
-"POT-Creation-Date: 2017-07-04 13:00:18+00:00\n"
+"POT-Creation-Date: 2017-07-04 13:17:14+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -80,30 +80,25 @@ msgstr ""
 msgid "View all posts in %s"
 msgstr ""
 
-#: inc/template-tags.php:43
-msgctxt "post date"
-msgid "%s"
-msgstr ""
-
 #. translators: used between list items, there is a space after the comma
 
-#: inc/template-tags.php:58
+#: inc/template-tags.php:55
 msgid " "
 msgstr ""
 
-#: inc/template-tags.php:60
+#: inc/template-tags.php:57
 msgid "Tags: %1$s"
 msgstr ""
 
 #. translators: %s: post title
 
-#: inc/template-tags.php:67
+#: inc/template-tags.php:64
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
 #. translators: %s: Name of current post
 
-#: inc/template-tags.php:74 template-parts/content-page.php:39
+#: inc/template-tags.php:71 template-parts/content-page.php:39
 msgid "Edit %s"
 msgstr ""
 
@@ -145,7 +140,7 @@ msgid "Begonia Lite"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://demos.pixelgrade.com/begonia-lite/"
+msgid "https://pixelgrade.com/themes/begonia-lite/"
 msgstr ""
 
 #. Description of the plugin/theme
