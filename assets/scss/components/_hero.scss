@@ -117,10 +117,21 @@ h1.c-hero__entry-title {
 
     .hero_categories, .posted-on {
         display: inline;
-        a {
+
+        > a {
             @extend %link-style;
             font-size: 14px;
             font-weight: bold;
+
+            &:after {
+                content:",";
+            }
+
+            &:last-child {
+                &:after {
+                    content:"";
+                }
+            }
         }
     }
 }

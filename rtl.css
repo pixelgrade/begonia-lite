@@ -886,9 +886,9 @@ and the top and bottom ones rotate to form an X
   margin: 0 auto;
   width: 100%; }
 
-button a, html [type="button"] a, [type="reset"] a, [type="submit"] a, .c-hero__entry-meta .hero_categories a, .c-hero__entry-meta .posted-on a,
-.entry-meta .hero_categories a,
-.entry-meta .posted-on a, .c-hero_read_more a,
+button a, html [type="button"] a, [type="reset"] a, [type="submit"] a, .c-hero__entry-meta .hero_categories > a, .c-hero__entry-meta .posted-on > a,
+.entry-meta .hero_categories > a,
+.entry-meta .posted-on > a, .c-hero_read_more a,
 .hero_read_more a, .main-navigation, nav.pagination .nav-links, nav.pagination .nav-links .prev, .single-post .single-post-content .entry-content .tags-links > a, .single-post .single-post-content .navigation_posts .nav-box a, .comments-area .comment-list .reply a {
   text-transform: uppercase;
   color: #0300FF;
@@ -960,11 +960,19 @@ h1.c-hero__entry-title {
   .entry-meta .hero_categories,
   .entry-meta .posted-on {
     display: inline; }
-    .c-hero__entry-meta .hero_categories a, .c-hero__entry-meta .posted-on a,
-    .entry-meta .hero_categories a,
-    .entry-meta .posted-on a {
+    .c-hero__entry-meta .hero_categories > a, .c-hero__entry-meta .posted-on > a,
+    .entry-meta .hero_categories > a,
+    .entry-meta .posted-on > a {
       font-size: 14px;
       font-weight: bold; }
+      .c-hero__entry-meta .hero_categories > a:after, .c-hero__entry-meta .posted-on > a:after,
+      .entry-meta .hero_categories > a:after,
+      .entry-meta .posted-on > a:after {
+        content: ","; }
+      .c-hero__entry-meta .hero_categories > a:last-child:after, .c-hero__entry-meta .posted-on > a:last-child:after,
+      .entry-meta .hero_categories > a:last-child:after,
+      .entry-meta .posted-on > a:last-child:after {
+        content: ""; }
 
 .c-hero__entry-meta {
   margin-bottom: 25px; }
