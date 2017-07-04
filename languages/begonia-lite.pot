@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Begonia 0.0.1\n"
+"Project-Id-Version: Begonia Lite 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/begonia\n"
-"POT-Creation-Date: 2017-03-24 14:15:25+00:00\n"
+"POT-Creation-Date: 2017-07-04 13:00:18+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,26 +26,25 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: comments.php:31
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+#: comments.php:30
+msgid "One thought."
+msgid_plural "%d thoughts."
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:40 comments.php:61
+#: comments.php:39 comments.php:60
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:43 comments.php:64
+#: comments.php:42 comments.php:63
 msgid "Older Comments"
 msgstr ""
 
-#: comments.php:44 comments.php:65
+#: comments.php:43 comments.php:64
 msgid "Newer Comments"
 msgstr ""
 
-#: comments.php:78
+#: comments.php:77
 msgid "Comments are closed."
 msgstr ""
 
@@ -54,42 +53,26 @@ msgid "https://wordpress.org/"
 msgstr ""
 
 #: footer.php:18
-msgid "Proudly powered by %s"
+msgid " Proudly powered by %s"
 msgstr ""
 
-#: footer.php:18 footer.php:20
-msgid "Begonia"
-msgstr ""
-
-#: footer.php:20
-msgid "Theme: %1$s by %2$s %3$s %4$s."
-msgstr ""
-
-#: footer.php:20
-msgid "<a href=\""
-msgstr ""
-
-#: footer.php:20
-msgid "\" rel=\"designer\">Pixelgrade</a>"
+#: footer.php:22
+msgid "Theme: Begonia Lite by"
 msgstr ""
 
 #: functions.php:48
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:49
-msgid "Social Menu"
-msgstr ""
-
-#: functions.php:87
+#: functions.php:86
 msgid "Footer Sidebar"
 msgstr ""
 
-#: functions.php:89
+#: functions.php:88
 msgid "Add widgets here."
 msgstr ""
 
-#: header.php:25
+#: header.php:24
 msgid "Skip to content"
 msgstr ""
 
@@ -120,25 +103,12 @@ msgstr ""
 
 #. translators: %s: Name of current post
 
-#: inc/template-tags.php:74 template-parts/content-page.php:34
+#: inc/template-tags.php:74 template-parts/content-page.php:39
 msgid "Edit %s"
 msgstr ""
 
-#: search.php:19
-msgid "Search Results for: %s"
-msgstr ""
-
-#: template-parts/content-hero.php:47 template-parts/content-no_top.php:39
-msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: template-parts/content-hero.php:51 template-parts/content-no_top.php:43
+#: template-parts/content-hero.php:52 template-parts/content-no_top.php:57
 msgid "Read More"
-msgstr ""
-
-#: template-parts/content-hero.php:56 template-parts/content-no_top.php:48
-#: template-parts/content-page.php:22 template-parts/content.php:43
-msgid "Pages:"
 msgstr ""
 
 #: template-parts/content-none.php:14
@@ -157,22 +127,29 @@ msgstr ""
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
+#: template-parts/content-page.php:27 template-parts/content.php:39
+msgid "Pages:"
+msgstr ""
+
 #. translators: %s: Name of current post.
 
-#: template-parts/content.php:38
+#: template-parts/content.php:34
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: template-parts/toolbar.php:7
+#: template-parts/toolbar.php:15
 msgid "Main navigation"
+msgstr ""
+#. Theme Name of the plugin/theme
+msgid "Begonia Lite"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://demos.pixelgrade.com/boilerplate/"
+msgid "https://demos.pixelgrade.com/begonia-lite/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Some lovely description of your theme here."
+msgid "Begonia Lite is a blogging theme that frames your ideas and findings in a striking layout with a modern twist!"
 msgstr ""
 
 #. Author of the plugin/theme

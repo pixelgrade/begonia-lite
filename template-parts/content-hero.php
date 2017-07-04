@@ -18,7 +18,7 @@
 				$thumb_url = wp_get_attachment_image_src( $thumb_id, 'thumbnail-size', true );
 				?>
 
-				<img class="c-hero__image" src="<?php echo $thumb_url[0] ?>">
+				<img class="c-hero__image" src="<?php echo esc_url( $thumb_url[0] ); ?>">
 
 			<?php else: ?>
 

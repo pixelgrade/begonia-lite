@@ -45,4 +45,14 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-Images used throughout the theme demo (not bundled with the theme): [Julia Chernih](https://www.behance.net/JuliaChe), [Georgi Andinov](http://www.andinov.com/), [Diliana Florentin](https://www.behance.net/dilianaflorentin), [Philipp Jelenska](http://philippjelenska.com/).
+Begonia Lite bundles the following third-party resources:
+
+Overpass font, Copyright (c) 2016 Red Hat, Inc.
+License: [OFL](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web)
+Source: https://fonts.google.com/specimen/Overpass
+
+Bundled screenshot image, Copyright Breather
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://unsplash.com/photos/lOZiOalU72Q
+
+Images used throughout the theme demo (not bundled with the theme): [Breather](https://unsplash.com/@breather), [Atilla Taskiran](https://unsplash.com/@atilla), [Sophia Baboolal](https://unsplash.com/@sophiababoolal). All licensed under [CC0](http://creativecommons.org/choose/zero/).

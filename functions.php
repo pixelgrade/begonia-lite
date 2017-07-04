@@ -39,14 +39,13 @@ if ( ! function_exists( 'begonia_lite_setup' ) ) :
 		 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 		 */
 		add_theme_support( 'post-thumbnails' );
-		add_image_size( 'begonia-masonry-image', 450, 9999, false );
-		add_image_size( 'begonia-single-image', 1024, 9999, false );
-		add_image_size( 'begonia-navigation-thumbnails', 236, 9999, false );
+		add_image_size( 'begonia-lite-masonry-image', 450, 9999, false );
+		add_image_size( 'begonia-lite-single-image', 1024, 9999, false );
+		add_image_size( 'begonia-lite-navigation-thumbnails', 236, 9999, false );
 
 		// This theme uses wp_nav_menu() in three locations.
 		register_nav_menus( array(
 			'primary'   => __( 'Primary Menu', 'begonia-lite' ),
-			'social'    => __( 'Social Menu', 'begonia-lite' ),
 		) );
 
 		/*
@@ -99,12 +98,12 @@ add_action( 'widgets_init', 'begonia_lite_widgets_init' );
  * Enqueue scripts and styles.
  */
 function begonia_lite_scripts() {
-	wp_enqueue_style( 'begonia-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'begonia-lite-style', get_stylesheet_uri() );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-	wp_enqueue_script( 'begonia-scripts', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ), '20120209', true );
+	wp_enqueue_script( 'begonia-lite-scripts', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ), '20120209', true );
 
 }
 add_action( 'wp_enqueue_scripts', 'begonia_lite_scripts' );
