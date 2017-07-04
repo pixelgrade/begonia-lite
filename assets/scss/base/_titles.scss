@@ -75,10 +75,14 @@
 p, a, ul, li {
     font-size: 17px;
     color: $color-dark;
-    font-weight: 300;
     text-decoration: none;
 }
 
+p {
+    font-weight: 300;
+    line-height: 24px;
+    font-size: 16px;
+}
 a:hover {
     text-decoration: none;
     opacity: .8;

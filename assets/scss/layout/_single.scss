@@ -5,7 +5,9 @@ body:not(.blog) .site-main {
   .entry-title {
     max-width: $container-max-width;
     margin: 0 auto;
-    padding: 0 70px 48px 70px;
+    padding: 0 70px 36px 70px;
+    line-height: 50px;
+    font-size: 50px;
 
     @include below(small) {
       padding: 0 35px 48px 35px;
@@ -25,7 +27,7 @@ body:not(.blog) .site-main {
   }
 
   .entry-meta {
-    padding: 70px 0 30px 70px;
+    padding: 80px 0 14px 70px;
     max-width: $container-max-width;
     margin: 0 auto;
 

@@ -713,8 +713,12 @@ h6 {
 p, a, ul, ul > li, li {
   font-size: 17px;
   color: #313131;
-  font-weight: 300;
   text-decoration: none; }
+
+p {
+  font-weight: 300;
+  line-height: 24px;
+  font-size: 16px; }
 
 a:hover {
   text-decoration: none;
@@ -1310,8 +1314,7 @@ h2.widget-title {
   .c-card .entry-content a > p {
     padding-bottom: 48px;
     font-size: 16px;
-    color: #313131;
-    font-weight: 200; }
+    color: #313131; }
 
 article:nth-child(1) .c-hero__image {
   width: 100% !important; }
@@ -1526,7 +1529,9 @@ body:not(.blog) .site-main {
   body:not(.blog) .site-main .entry-title {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 70px 48px 70px; }
+    padding: 0 70px 36px 70px;
+    line-height: 50px;
+    font-size: 50px; }
     @media screen and (max-width: 560px) {
       body:not(.blog) .site-main .entry-title {
         padding: 0 35px 48px 35px; } }
@@ -1540,7 +1545,7 @@ body:not(.blog) .site-main {
       body:not(.blog) .site-main .type-page > .entry-content {
         padding: 0 35px 60px 35px; } }
   body:not(.blog) .site-main .entry-meta {
-    padding: 70px 0 30px 70px;
+    padding: 80px 0 14px 70px;
     max-width: 1440px;
     margin: 0 auto; }
     @media screen and (max-width: 560px) {
