@@ -32,22 +32,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
  * 7.0 - Hacks and Overrides
  *
  */
-/*
-@font-face {
-  font-family: 'overpass';
-  src: url('assets/fonts/overpass/overpass-regular.eot');
-  src: url('assets/fonts/overpass/overpass-regular.woff2') format('woff2'),
-  url('assets/fonts/overpass/overpass-regular.woff') format('woff'),
-  url('assets/fonts/overpass/overpass-regular.ttf')  format('truetype');
-}
-
-@font-face {
-  font-family: 'overpasslight';
-  src: url('assets/fonts/overpass/overpass-light.woff2') format('woff2'),
-  url('assets/fonts/overpass/overpass-light.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}*/
 /**
  * 1.0 - Reset
  */
@@ -902,7 +886,9 @@ and the top and bottom ones rotate to form an X
   margin: 0 auto;
   width: 100%; }
 
-button a, html [type="button"] a, [type="reset"] a, [type="submit"] a, .c-hero__entry-meta .hero_categories a, .c-hero__entry-meta .posted-on a, .entry-meta .hero_categories a, .entry-meta .posted-on a, .c-hero_read_more a,
+button a, html [type="button"] a, [type="reset"] a, [type="submit"] a, .c-hero__entry-meta .hero_categories a, .c-hero__entry-meta .posted-on a,
+.entry-meta .hero_categories a,
+.entry-meta .posted-on a, .c-hero_read_more a,
 .hero_read_more a, .main-navigation, nav.pagination .nav-links, nav.pagination .nav-links .prev, .single-post .single-post-content .entry-content .tags-links > a, .single-post .single-post-content .navigation_posts .nav-box a, .comments-area .comment-list .reply a {
   text-transform: uppercase;
   color: #0300FF;
@@ -935,7 +921,7 @@ button a, html [type="button"] a, [type="reset"] a, [type="submit"] a, .c-hero__
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  padding: 0 70px 80px;
+  padding: 0 70px 70px;
   z-index: 3; }
   .c-hero__wrap a:hover {
     text-decoration: none; }
@@ -946,6 +932,8 @@ button a, html [type="button"] a, [type="reset"] a, [type="submit"] a, .c-hero__
   @media screen and (max-width: 560px) {
     .c-hero__wrap {
       padding: 0 35px 40px; } }
+  .c-hero__wrap > a > h1 {
+    margin-bottom: 35px; }
 
 h1.c-hero__entry-title {
   color: #FFFFFF;
@@ -965,13 +953,21 @@ h1.c-hero__entry-title {
     .c-hero__content .c-hero_read_more {
       display: none; } }
 
-.c-hero__entry-meta, .entry-meta {
+.c-hero__entry-meta,
+.entry-meta {
   margin-bottom: 14px; }
-  .c-hero__entry-meta .hero_categories, .c-hero__entry-meta .posted-on, .entry-meta .hero_categories, .entry-meta .posted-on {
+  .c-hero__entry-meta .hero_categories, .c-hero__entry-meta .posted-on,
+  .entry-meta .hero_categories,
+  .entry-meta .posted-on {
     display: inline; }
-    .c-hero__entry-meta .hero_categories a, .c-hero__entry-meta .posted-on a, .entry-meta .hero_categories a, .entry-meta .posted-on a {
+    .c-hero__entry-meta .hero_categories a, .c-hero__entry-meta .posted-on a,
+    .entry-meta .hero_categories a,
+    .entry-meta .posted-on a {
       font-size: 14px;
       font-weight: bold; }
+
+.c-hero__entry-meta {
+  margin-bottom: 25px; }
 
 .c-hero_read_more,
 .hero_read_more {
@@ -1015,6 +1011,12 @@ h1.c-hero__entry-title {
       -webkit-transform: rotate(45deg);
       padding: 4px;
       left: 30px; }
+    .c-hero_read_more a:hover,
+    .hero_read_more a:hover {
+      -webkit-transition: background 0.2s ease-in-out;
+      transition: background 0.2s ease-in-out;
+      background: #313131;
+      opacity: 1; }
 
 .site-description {
   display: none; }
@@ -1176,7 +1178,7 @@ h2.widget-title {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    text-align: left; }
+    text-align: right; }
     .main-navigation ul.nav--main > li, .main-navigation ul > li.nav--main > li {
       list-style: none;
       display: inline-block;
@@ -1708,7 +1710,6 @@ body:not(.blog):not(.archive) .site-main {
       width: 50px;
       height: 50px;
       margin-left: 15px;
-      border-radius: 50%;
       vertical-align: middle; }
     .comments-area .comment-list .comment-metadata, .comments-area .comment-list .comment-author {
       text-transform: uppercase;

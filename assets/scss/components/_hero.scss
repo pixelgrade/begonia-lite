@@ -65,7 +65,7 @@ $background-gradient-single: linear-gradient(180deg, rgba(3,26,204,0.79) 0%, rgb
 
 .c-hero__wrap {
     flex-flow: column nowrap;
-    padding: 0 70px 80px;
+    padding: 0 70px 70px;
     z-index: 3;
     @extend %c-hero_left;
 
@@ -82,6 +82,10 @@ $background-gradient-single: linear-gradient(180deg, rgba(3,26,204,0.79) 0%, rgb
 
     @include below(small) {
         padding: 0 35px 40px;
+    }
+
+    > a > h1 {
+        margin-bottom: 35px;
     }
 }
 
@@ -107,7 +111,8 @@ h1.c-hero__entry-title {
     }
 }
 
-.c-hero__entry-meta, .entry-meta{
+.c-hero__entry-meta,
+.entry-meta {
     margin-bottom: 14px;
 
     .hero_categories, .posted-on {
@@ -118,6 +123,10 @@ h1.c-hero__entry-title {
             font-weight: bold;
         }
     }
+}
+
+.c-hero__entry-meta {
+    margin-bottom: 25px;
 }
 
 .c-hero_read_more,
@@ -163,6 +172,12 @@ h1.c-hero__entry-title {
             -webkit-transform: rotate(-45deg);
             padding: 4px;
             right: 30px;
+        }
+
+        &:hover {
+            transition: background 0.2s ease-in-out;
+            background: $color-dark;
+            opacity: 1;
         }
     }
 }
