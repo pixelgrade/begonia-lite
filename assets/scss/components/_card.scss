@@ -44,7 +44,7 @@ $card-radius:          0                    !default;
         }
     }
 
-    &.portrait {
+    &.portrait, &.tall {
         @include below(lap) {
             .entry-thumbnail {
                 display: block;
