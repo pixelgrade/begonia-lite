@@ -108,7 +108,7 @@ h1.c-hero__entry-title {
 }
 
 .c-hero__entry-meta, .entry-meta{
-    margin-bottom: 32px;
+    margin-bottom: 14px;
 
     .hero_categories, .posted-on {
         display: inline;
@@ -134,6 +134,7 @@ h1.c-hero__entry-title {
         padding: 20px;
         font-size: 14px;
         letter-spacing: 1px;
+        line-height: 22px;
         font-weight: bold;
 
         &:before {
