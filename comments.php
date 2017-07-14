@@ -26,9 +26,9 @@ if ( post_password_required() ) {
 	if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
-				printf( // WPCS: XSS OK.
-					esc_html( _n( 'One thought.', '%d thoughts.', get_comments_number(), 'begonia-lite' ) ),
-					number_format_i18n( get_comments_number() ),
+				printf( // translators: %d is replaced with the number of comments
+					esc_html( _n( '%d thought.', '%d thoughts.', get_comments_number(), 'begonia-lite' ) ),
+					esc_html( get_comments_number() ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			?>

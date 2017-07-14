@@ -49,7 +49,7 @@
 
 			<div class="c-hero__content entry-content">
 				<div class="c-hero_read_more">
-					<a href="<?php the_permalink(); ?>"><?php _e( 'Read More', 'begonia-lite' ); ?></a>
+					<a href="<?php the_permalink(); ?>"><?php esc_html_e( 'Read More', 'begonia-lite' ); ?></a>
 				</div>
 			</div><!-- .entry-content -->
 		</div>
