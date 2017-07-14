@@ -51,8 +51,8 @@ Overpass font
 License: [OFL](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web)
 Source: https://fonts.google.com/specimen/Overpass
 
-Bundled screenshot image, Copyright Breather
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/photos/lOZiOalU72Q
+Bundled screenshot image, Copyright Pexels
+License: Creative Commons Zero (CC0)
+Source: https://www.pexels.com/photo/green-cover-book-on-round-end-table-beside-flower-vase-121476/
 
 Images used throughout the theme demo (not bundled with the theme): [Breather](https://unsplash.com/@breather), [Atilla Taskiran](https://unsplash.com/@atilla), [Sophia Baboolal](https://unsplash.com/@sophiababoolal). All licensed under [CC0](http://creativecommons.org/choose/zero/).
