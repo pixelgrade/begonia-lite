@@ -21,9 +21,9 @@ function begonia_lite_posted_on() { ?>
 			if ( $categories ) {
 				foreach ( $categories as $category ) {
 					// translators: the %s is replaced with the category name
-					$output .= '<a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'begonia-lite' ), $category->name ) ) . '">' . $category->cat_name . '</a>' . $separator;
+					$output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s", 'begonia-lite' ), esc_html( $category->name ) ) ) . '">' . esc_html( $category->cat_name ) . '</a>' . $separator;
 				}
-				echo esc_html( trim( $output, $separator ) );
+				echo trim( $output, $separator );
 			} ?>
 	</div>
 
@@ -41,7 +41,7 @@ function begonia_lite_posted_on() { ?>
 			esc_html( get_the_modified_date() )
 		);
 		$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>' ;
-		echo '<span class="posted-on">' . esc_html( $posted_on ) . '</span>';
+		echo '<span class="posted-on">' . $posted_on . '</span>';
 }
 endif;
 
