@@ -151,7 +151,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -1186,7 +1187,7 @@ h2.widget-title {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    text-align: right; }
+    text-align: left; }
     .main-navigation ul.nav--main > li, .main-navigation ul > li.nav--main > li {
       list-style: none;
       display: inline-block;
