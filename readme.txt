@@ -63,4 +63,4 @@ FitText.js
 License: WTFPL
 Sourse: http://fittextjs.com/
 
-Images used throughout the theme demo (not bundled with the theme): [Breather](https://unsplash.com/@breather), [Atilla Taskiran](https://unsplash.com/@atilla), [Sophia Baboolal](https://unsplash.com/@sophiababoolal). All licensed under [CC0](http://creativecommons.org/choose/zero/).
+* Images: screenshot image from PxHere - [Source](https://pxhere.com/en/photo/141941) licensed under CC0 Public Domain.
