@@ -5,7 +5,7 @@ Tested up to: 5.2.2
 Stable tag: 1.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: grid-layout, blog, photography,
+Tags: grid-layout, blog, photography, custom-menu, threaded-comments
 
 == Description ==
 
