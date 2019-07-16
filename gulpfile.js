@@ -1,4 +1,4 @@
-var theme = 'begonia';
+var theme = 'begonia-lite';
 
 // This is not a normal require, because our gulp-help tool (which provides the
 // nice task descriptions on the command-line) requires changing the function

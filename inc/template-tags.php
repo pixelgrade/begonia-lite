@@ -53,7 +53,7 @@ function begonia_lite_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ' ', 'begonia-lite' ) );
+		$tags_list = get_the_tag_list( '', ' ' );
 		if ( $tags_list ) {
 			// translators: the %1$s is replaced with the tags list
 			printf( '<span class="tags-links">' . esc_html__( 'Tags: %1$s', 'begonia-lite' ) . '</span>', $tags_list ); // WPCS: XSS OK.
