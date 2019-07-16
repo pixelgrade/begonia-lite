@@ -1,6 +1,6 @@
 /*
 Theme Name: Begonia Lite
-Theme URI: https://pixelgrade.com/themes/begonia-lite/
+Theme URI: https://github.com/pixelgrade/begonia-lite
 Author: Pixelgrade
 Author URI: https://pixelgrade.com
 Description: Begonia Lite is a blogging theme that frames your ideas and findings in a striking layout with a modern twist!
@@ -10,10 +10,16 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: begonia-lite
 Domain Path: /languages/
 Tags: grid-layout, blog, photography, custom-menu, threaded-comments
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
 
-Begonia is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Begonia Lite WordPress Theme, Copyright (C) 2017-2019, Pixelgrade.
+Begonia Lite is distributed under the terms of the GNU GPL v2 or later.
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+
+Begonia Lite is based on Underscores http://underscores.me/, (C) 2012-2018 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -589,19 +595,26 @@ dl {
         flex-basis: 66%; }
 
 /* Unordered Lists */
-ul, ul > li {
+
+ul,
+ul > li {
   list-style-type: disc;
   line-height: 2rem; }
 
 /* Ordered Lists */
-ol, ol > li {
+
+ol,
+ol > li {
   list-style-type: decimal;
   line-height: 2rem; }
 
 a:hover {
   text-decoration: underline; }
 
-button, html [type="button"], [type="reset"], [type="submit"] {
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
   background: #0300FF;
   -webkit-box-ordinal-group: 5;
       -ms-flex-order: 4;
@@ -645,16 +658,25 @@ table {
   table td {
     vertical-align: middle; }
 
-table tr, table thead, table tbody, table tfoot {
+table tr,
+table thead,
+table tbody,
+table tfoot {
   border-bottom: 1px solid; }
-  table tr:last-child, table thead:last-child, table tbody:last-child, table tfoot:last-child {
+  table tr:last-child,
+  table thead:last-child,
+  table tbody:last-child,
+  table tfoot:last-child {
     border-bottom: 0; }
 
-table th, table td {
+table th,
+table td {
   padding: .5em; }
-  table th:first-child, table td:first-child {
+  table th:first-child,
+  table td:first-child {
     padding-left: 0; }
-  table th:last-child, table td:last-child {
+  table th:last-child,
+  table td:last-child {
     padding-right: 0; }
 
 .h0, h1, h2, h3, h4, h5, h6 {
@@ -1479,7 +1501,7 @@ nav.pagination {
     margin: 0 80px; }
     nav.pagination .nav-links .page-numbers {
       color: #0300FF; }
-    nav.pagination .nav-links .page-numbers:not(.next):not(.prev) {
+    nav.pagination .nav-links .page-numbers {
       letter-spacing: 5px; }
     nav.pagination .nav-links .next {
       font-size: 32px;
@@ -1541,41 +1563,41 @@ body.page .entry-thumbnail {
 body:not(.blog):not(.archive) .site-main {
   width: 100%;
   margin: 0 auto; }
-  body:not(.blog):not(.archive) .site-main .entry-title {
+  body  .site-main .entry-title {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 70px 36px 70px;
     line-height: 50px;
     font-size: 50px; }
     @media screen and (max-width: 560px) {
-      body:not(.blog):not(.archive) .site-main .entry-title {
+      body  .site-main .entry-title {
         padding: 0 35px 48px 35px; } }
-  body:not(.blog):not(.archive) .site-main .type-page > .entry-content {
+  body  .site-main .type-page > .entry-content {
     max-width: 1440px;
     margin: 0 auto;
     padding-left: 70px;
     padding-right: 70px;
     padding-bottom: 120px; }
     @media screen and (max-width: 560px) {
-      body:not(.blog):not(.archive) .site-main .type-page > .entry-content {
+      body  .site-main .type-page > .entry-content {
         padding: 0 35px 60px 35px; } }
-  body:not(.blog):not(.archive) .site-main .entry-meta {
+  body  .site-main .entry-meta {
     padding: 80px 0 14px 70px;
     max-width: 1440px;
     margin: 0 auto; }
     @media screen and (max-width: 560px) {
-      body:not(.blog):not(.archive) .site-main .entry-meta {
+      body  .site-main .entry-meta {
         padding: 35px 0 35px 35px; } }
-  body:not(.blog):not(.archive) .site-main figure:not(.alignright):not(.alignleft) {
+  body  .site-main figure {
     max-width: 1440px;
     width: 100% !important;
     margin: 80px auto;
     /*&.alignright, &.alignleft {
       padding: 0;
     }*/ }
-  body:not(.blog):not(.archive) .site-main p > img:not(.alignright):not(.alignleft) {
+  body  .site-main p > img {
     width: 100%; }
-  body:not(.blog):not(.archive) .site-main p {
+  body  .site-main p {
     margin-bottom: 32px; }
 
 .single-post .site-title a {
