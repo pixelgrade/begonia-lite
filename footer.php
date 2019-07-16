@@ -19,10 +19,10 @@
 		echo esc_url( __( 'https://wordpress.org/', 'begonia-lite' ) ); ?>"><?php printf( esc_html__( ' Proudly powered by %s', 'begonia-lite' ), 'WordPress' ); ?></a>
 		<span class="sep"> | </span>
 		<?php printf(
-			'%1$s <a href="%2$s" title="%3$s">%4$s</a>.',
+			'%1$s <a href="%2$s" title="%3$s" rel="nofollow">%4$s</a>.',
 			esc_html__( 'Theme: Begonia Lite by', 'begonia-lite' ),
 			esc_attr( 'https://pixelgrade.com/' ),
-			esc_attr( 'The PixelGrade Website' ),
+			esc_attr( 'The Pixelgrade Website' ),
 			esc_html( 'Pixelgrade' )
 		); ?>
 	</div><!-- .site-info -->
