@@ -1,10 +1,11 @@
 === BEGONIA LITE ===
-Contributors: pixelgrade, babbardel, raduconstantin, ilincaroman6, robertdghetau
-Requires at least: WordPress 4.7
-Tested up to: WordPress 4.7
+Contributors: pixelgrade, babbardel, raduconstantin, robertdghetau
+Requires at least: 4.9.9
+Tested up to: 5.2.2
+Stable tag: 1.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: grid-layout, blog, photography
+Tags: grid-layout, blog, photography,
 
 == Description ==
 
@@ -24,6 +25,9 @@ No, you just need to install the theme, activate it and start adding your posts.
 
 == Changelog ==
 
+= 1.1.3 - July 16th 2019 =
+* Compatibility tests with the latest WordPress and PHP version.
+
 = 1.0 - May 20th 2017 =
 * Initial release
 
@@ -33,7 +37,7 @@ Begonia Lite WordPress Theme, (C) 2017 Pixelgrade.com
 
 Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 
-Noah Lite is distributed under the terms of the GNU GPL
+Begonia Lite is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
