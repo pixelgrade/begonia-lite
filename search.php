@@ -32,14 +32,14 @@ get_header(); ?>
 					case '1':
 						if ( ( $begonia_post_archive_counter !== 1 ) && is_home() && is_front_page() ) {
 							get_template_part( 'template-parts/content', 'no_top' );
-							continue;
+							break;
 						}
 						get_template_part( 'template-parts/content', 'hero' );
 						break;
 					case '2':
 						if ( ( $begonia_post_archive_counter !== 2 ) && is_home() && is_front_page() ) {
 							get_template_part( 'template-parts/content', 'no_top' );
-							continue;
+							break;
 						}
 						echo '<div class="main-posts">';
 						get_template_part( 'template-parts/content', 'no_top' );
