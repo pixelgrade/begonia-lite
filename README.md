@@ -1,7 +1,7 @@
 # Begonia Lite: A Free WordPress Blogging Theme
 ### Begonia Lite is a blogging theme that frames your ideas and findings in a striking layout with a modern twist!
 
-[Download for Free](https://downloads.wordpress.org/theme/begonia-lite.latest-stable.zip) &nbsp;·&nbsp; [Demo Preview](https://demos.pixelgrade.com/begonia-lite/)
+[View Demo](https://demos.pixelgrade.com/begonia-lite/) &nbsp;·&nbsp; [Download for Free](https://downloads.wordpress.org/theme/begonia-lite.latest-stable.zip)
 
 [![](https://img.shields.io/github/issues-closed/pixelgrade/begonia-lite.svg?color=6cc644&label=Issues)](https://github.com/pixelgrade/begonia-lite/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+) [![](https://img.shields.io/github/issues/pixelgrade/begonia-lite.svg?color=4078c0&label=%20)](https://github.com/pixelgrade/begonia-lite/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen)
 
