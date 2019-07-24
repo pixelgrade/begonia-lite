@@ -1,20 +1,20 @@
 {
-  "name": "components",
+  "name": "begonia-lite",
   "devDependencies": {
-    "browser-sync": "^2.14.0",
-    "del": "^2.2.2",
-    "fs": "0.0.2",
-    "gulp": "*",
-    "gulp-autoprefixer": "*",
-    "gulp-concat": "^2.6.0",
-    "gulp-csscomb": "*",
-    "gulp-exec": "^2.1.2",
-    "gulp-help": "^1.6.1",
-    "gulp-iife": "^0.3.0",
-    "gulp-rename": "*",
-    "gulp-rtlcss": "*",
-    "gulp-sourcemaps": "*",
-    "gulp-sass": "*",
-    "gulp-util": "^3.0.7"
+    "browser-sync": "^2.26.7",
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-exec": "^3.0.2",
+    "gulp-iife": "^0.4.0",
+    "gulp-load-plugins": "^2.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-rtlcss": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-sass": "^4.0.2",
+    "gulp-util": "^3.0.8",
+    "gulp-rsync": "^0.0.8"
   }
 }

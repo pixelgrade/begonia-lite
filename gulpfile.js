@@ -1,28 +1,17 @@
 var theme = 'begonia-lite';
 
-// This is not a normal require, because our gulp-help tool (which provides the
-// nice task descriptions on the command-line) requires changing the function
-// signature of gulp tasks to include the task description.
-var gulp = require('gulp-help')(require('gulp'));
+var gulp = require('gulp'),
+  plugins = require('gulp-load-plugins')();
 
 // Gulp / Node utilities
 var u = require('gulp-util');
 var log = u.log;
 var c = u.colors;
-var exec = require('gulp-exec');
-var spawn = require('child_process').spawn;
 var del = require('del');
 var fs = require('fs');
+var cp = require('child_process');
 
 // Basic workflow plugins
-var prefix = require('gulp-autoprefixer');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var rename = require('gulp-rename');
-var csscomb = require('gulp-csscomb');
-var rtlcss = require('gulp-rtlcss');
-var concat = require('gulp-concat');
-var iife = require("gulp-iife");
 var bs = require('browser-sync');
 var reload = bs.reload;
 
@@ -41,35 +30,37 @@ var config = require('./gulpconfig.json');
 // Compiles Sass and runs the CSS through autoprefixer. A separate task will
 // combine the compiled CSS with vendor files and minify the aggregate.
 // -----------------------------------------------------------------------------
-gulp.task('style.css', 'Compiles Sass to style.css and uses autoprefixer', function() {
+gulp.task('style.css', function() {
     return gulp.src('assets/scss/*.scss')
-        .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'nested'}).on('error', sass.logError))
-        .pipe(prefix("last 2 versions", "> 1%"))
-        .pipe(sourcemaps.write('.'))
+        .pipe(plugins.sourcemaps.init())
+        .pipe(plugins.sass({outputStyle: 'nested'}).on('error', plugins.sass.logError))
+        .pipe(plugins.autoprefixer())
+        .pipe(plugins.sourcemaps.write('.'))
         .pipe(gulp.dest('.'));
 });
 
-gulp.task('rtl.css', 'Generates RTL stylesheet based on style.css', ['style.css'], function() {
+gulp.task('rtl.css', function() {
     return gulp.src('style.css')
-        .pipe(rtlcss())
-        .pipe(rename('rtl.css'))
+        .pipe(plugins.rtlcss())
+        .pipe(plugins.rename('rtl.css'))
         .pipe(gulp.dest('.'));
 });
 
-gulp.task('styles', 'Compiles Sass to style.css and generates rtl.css', ['rtl.css'], function() {
-    // silcence
-});
+function stylesSequence(cb) {
+  gulp.series('style.css', 'rtl.css')(cb);
+}
+stylesSequence.description = 'Compile all styles';
+gulp.task('styles', stylesSequence )
 
 // -----------------------------------------------------------------------------
 // Combine JavaScript files
 // -----------------------------------------------------------------------------
-gulp.task('scripts', 'Concatenate all JS into main.js and wrap all code in a closure', function () {
+gulp.task('scripts', function () {
     return gulp.src(['./assets/js/**/*.js', '!./assets/js/main.js'])
     // Concatenate all our files into main.js
-        .pipe(concat('main.js'))
+        .pipe(plugins.concat('main.js'))
         // Wrap all js logic in an immediately invoked function expression (iife)
-        .pipe(iife({
+        .pipe(plugins.iife({
             params: ["window", "document", "$"],
             args: ["window", "document", "jQuery"]
         }))
@@ -88,7 +79,7 @@ gulp.task('scripts', 'Concatenate all JS into main.js and wrap all code in a clo
 //
 // Usage: gulp browser-sync-proxy --port 8080
 // -----------------------------------------------------------------------------
-gulp.task('browser-sync', false, function () {
+gulp.task('browser-sync', function () {
     bs({
         // Point this to your pre-existing server.
         proxy: config.baseurl + (u.env.port ? ':' + u.env.port : ''),
@@ -114,34 +105,79 @@ gulp.task('browser-sync', false, function () {
 // bit of time to run and don't need to happen on every file change. If you want
 // to run those tasks more frequently, set up a new watch task here.
 // -----------------------------------------------------------------------------
-gulp.task('watch', 'Watch for changes to various files and process them', function() {
+gulp.task('watch', function() {
     gulp.watch('assets/scss/**/*.scss', ['styles']);
     gulp.watch('assets/js/**/*.js', ['scripts']);
 });
 
 // -----------------------------------------------------------------------------
-// Convenience task for development.
-//
-// This is the command you run to warm the site up for development. It will do
-// a full build, open BrowserSync, and start listening for changes.
-// -----------------------------------------------------------------------------
-gulp.task('bs', 'Main development task:', ['styles', 'scripts', 'browser-sync', 'watch']);
-
-// -----------------------------------------------------------------------------
 // Copy theme folder outside in a build folder, recreate styles before that
 // -----------------------------------------------------------------------------
-gulp.task('copy-folder', 'Copy theme production files to a build folder', ['styles', 'scripts'], function () {
-    return gulp.src('./')
-        .pipe(exec('rm -Rf ./../build; mkdir -p ./../build/' + theme + '; rsync -av --exclude="node_modules" ./* ./../build/' + theme + '/', {
-            silent: true,
-            continueOnError: true // default: false
-        }));
-});
+function copyFolder() {
+
+  var dir = process.cwd();
+  return gulp.src( './*' )
+    .pipe( plugins.exec( 'rm -Rf ./../build; mkdir -p ./../build/' + theme + ';', {
+      silent: true,
+      continueOnError: true // default: false
+    } ) )
+    .pipe(plugins.rsync({
+      root: dir,
+      destination: '../build/' + theme + '/',
+      // archive: true,
+      progress: false,
+      silent: true,
+      compress: false,
+      recursive: true,
+      emptyDirectories: true,
+      clean: true,
+      exclude: ['node_modules']
+    }));
+}
+copyFolder.description = 'Copy theme production files to a build folder';
+gulp.task( 'copy-folder', copyFolder );
+
+function maybeFixBuildDirPermissions(done) {
+
+  cp.execSync('find ./../build -type d -exec chmod 755 {} \\;');
+
+  return done();
+}
+maybeFixBuildDirPermissions.description = 'Make sure that all directories in the build directory have 755 permissions.';
+gulp.task( 'fix-build-dir-permissions', maybeFixBuildDirPermissions );
+
+function maybeFixBuildFilePermissions(done) {
+
+  cp.execSync('find ./../build -type f -exec chmod 644 {} \\;');
+
+  return done();
+}
+maybeFixBuildFilePermissions.description = 'Make sure that all files in the build directory have 644 permissions.';
+gulp.task( 'fix-build-file-permissions', maybeFixBuildFilePermissions );
+
+function maybeFixIncorrectLineEndings(done) {
+
+  cp.execSync('find ./../build -type f -print0 | xargs -0 -n 1 -P 4 dos2unix');
+
+  return done();
+}
+maybeFixIncorrectLineEndings.description = 'Make sure that all line endings in the files in the build directory are UNIX line endings.';
+gulp.task( 'fix-line-endings', maybeFixIncorrectLineEndings );
+
+// -----------------------------------------------------------------------------
+// Replace the themes' text domain with the actual text domain (think variations)
+// -----------------------------------------------------------------------------
+function themeTextdomainReplace() {
+  return gulp.src( '../build/' + theme + '/**/*.php' )
+    .pipe( plugins.replace( /['|"]__theme_txtd['|"]/g, '\'' + theme + '\'' ) )
+    .pipe( gulp.dest( '../build/' + theme ) );
+}
+gulp.task( 'txtdomain-replace', themeTextdomainReplace );
 
 // -----------------------------------------------------------------------------
 // Remove unneeded files and folders from the build folder
 // -----------------------------------------------------------------------------
-gulp.task('build', 'Remove unneeded files and folders from the build folder', ['copy-folder'], function () {
+gulp.task('remove-unneeded-files', function () {
 
     // files that should not be present in build
     files_to_remove = [
@@ -168,20 +204,27 @@ gulp.task('build', 'Remove unneeded files and folders from the build folder', ['
         '**/__MACOSX',
         'README.md',
         '.csscomb',
-        '.codeclimate.yml'
+        '.codeclimate.yml',
+        'browserslist',
     ];
 
     files_to_remove.forEach(function (e, k) {
         files_to_remove[k] = '../build/' + theme + '/' + e;
     });
 
-    return del.sync(files_to_remove, {force: true});
+    return del(files_to_remove, {force: true});
 });
+
+function buildSequence(cb) {
+  return gulp.series( 'copy-folder', 'remove-unneeded-files', 'fix-build-dir-permissions', 'fix-build-file-permissions', 'fix-line-endings', 'txtdomain-replace' )(cb);
+}
+buildSequence.description = 'Sets up the build folder';
+gulp.task( 'build', buildSequence );
 
 // -----------------------------------------------------------------------------
 // Create the theme installer archive and delete the build folder
 // -----------------------------------------------------------------------------
-gulp.task('zip', 'Create the theme installer archive and delete the build folder', ['build'], function() {
+function makeZip() {
 
     var versionString = '';
     // get theme version from styles.css
@@ -205,22 +248,13 @@ gulp.task('zip', 'Create the theme installer archive and delete the build folder
     versionString = '-' + versionString.replace(/\./g,'-');
 
     return gulp.src('./')
-        .pipe(exec('cd ./../; rm -rf ' + theme[0].toUpperCase() + theme.slice(1) + '*.zip; cd ./build/; zip -r -X ./../' + theme[0].toUpperCase() + theme.slice(1) + '-Installer' + versionString +'.zip ./; cd ./../; rm -rf build'));
-});
+        .pipe(plugins.exec('cd ./../; rm -rf ' + theme + '*.zip; cd ./build/; zip -r -X ./../' + theme +'.zip ./; cd ./../; rm -rf build'));
+}
+makeZip.description = 'Create the theme installer archive and delete the build folder';
+gulp.task( 'make-zip', makeZip );
 
-gulp.task('server', 'Compile scripts and styles for production purposes', ['styles', 'scripts'], function () {
-    console.log('The styles and scripts have been compiled for production! Go and clear the caches!');
-});
-
-// -----------------------------------------------------------------------------
-// Default: load task listing
-//
-// Instead of launching some unspecified build process when someone innocently
-// types `gulp` into the command line, we provide a task listing so they know
-// what options they have without digging into the file.
-// -----------------------------------------------------------------------------
-gulp.task('default', false, ['help']);
-
-gulp.task('watch', ['styles'], function() {
-    gulp.watch(['assets/scss/**/*.scss', 'components/**/*.scss'], ['styles']);
-});
+function zipSequence(cb) {
+  return gulp.series( 'build', 'make-zip' )(cb);
+}
+zipSequence.description = 'Creates the zip file';
+gulp.task( 'zip', zipSequence  );
