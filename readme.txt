@@ -2,7 +2,7 @@
 Contributors: pixelgrade, babbardel, raduconstantin, robertdghetau
 Requires at least: 4.9.9
 Tested up to: 5.2.2
-Stable tag: 1.1.3
+Stable tag: 1.1.4
 Requires PHP: 5.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -25,6 +25,9 @@ Begonia Lite is a blogging theme that frames your ideas and findings in a striki
 No, you just need to install the theme, activate it and start adding your posts.
 
 == Changelog ==
+
+= 1.1.4 - July 24th 2019 =
+* Added new wp_body_open hook.
 
 = 1.1.3 - July 16th 2019 =
 * Compatibility tests with the latest WordPress version.
