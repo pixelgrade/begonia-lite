@@ -1,4 +1,4 @@
-# Copyright (C) 2017 PixelGrade
+# Copyright (C) 2017 Pixelgrade
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
@@ -148,7 +148,7 @@ msgid "Begonia Lite is a blogging theme that frames your ideas and findings in a
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "PixelGrade"
+msgid "Pixelgrade"
 msgstr ""
 
 #. Author URI of the plugin/theme
